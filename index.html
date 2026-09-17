@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casos Criminales — Expedientes reales</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <nav class="wrap">
+    <div class="brand" data-nav="inicio">
+      <span class="mark">CC</span>
+      <div>
+        <div class="name">CASOS<span>.</span>CRIMINALES</div>
+        <div class="tag">Expedientes narrados</div>
+      </div>
+    </div>
+    <div class="navlinks">
+      <button data-nav="inicio">Inicio</button>
+      <button data-nav="casos">Casos</button>
+      <button data-nav="categorias">Categorías</button>
+      <button data-nav="sobre">Acerca de</button>
+    </div>
+    <button class="nav-cta" data-nav="suscribete-scroll">Suscribirme</button>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <button data-nav="inicio">Inicio</button>
+    <button data-nav="casos">Casos</button>
+    <button data-nav="categorias">Categorías</button>
+    <button data-nav="sobre">Acerca de</button>
+    <button data-nav="suscribete-scroll">Suscribirme</button>
+  </div>
+</header>
+
+<!-- ================= VISTA: INICIO ================= -->
+<section class="view active" id="view-inicio" data-view="inicio">
+  <div class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <div class="eyebrow">Blog de investigación narrativa</div>
+        <h1>La verdad<br>detrás del <em>expediente</em></h1>
+        <p class="lede">Casos reales, reconstruidos con rigor periodístico: la línea de tiempo, la evidencia y las preguntas que aún nadie ha respondido.</p>
+        <div class="hero-ctas">
+          <button class="btn btn-primary" data-nav="casos">Ver expedientes →</button>
+          <button class="btn btn-ghost" data-nav="sobre">Cómo investigamos</button>
+        </div>
+      </div>
+      <div class="board">
+        <span class="pin"></span>
+        <div class="board-row"><span class="label">Expediente</span><span class="val">EXP-014</span></div>
+        <div class="board-row"><span class="label">Categoría</span><span class="val">Sin resolver</span></div>
+        <div class="board-row"><span class="label">Ubicación</span><span class="val">Archivo regional</span></div>
+        <div class="board-row"><span class="label">Estado</span><span class="val open">Abierto</span></div>
+        <div class="board-row"><span class="label">Última entrada</span><span class="val">Hoy</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="tape"></div>
+  <section class="section">
+    <div class="wrap">
+      <article class="welcome-post">
+        <span class="case-tab">EXP-000</span>
+        <span class="section-tag">Entrada de bienvenida</span>
+        <h3>La verdad detrás del expediente</h3>
+        <p>Hay historias que parecen terminar cuando se conoce un nombre, una fecha o una sentencia. Sin embargo, detrás de muchos casos criminales quedan detalles que no encajan, versiones que se contradicen y preguntas sin resolver. La verdad detrás del expediente nace precisamente de la curiosidad por mirar más allá de lo evidente y descubrir lo qué ocurrió realmente cuando se reúnen todas las piezas del rompecabezas.</p>
+        <p>Este blog abre la puerta a casos criminales reales contados desde una mirada documentada. Cada publicación será trabajada como un expediente, reuniendo hechos, pruebas, testimonios, líneas de tiempo, contexto y diferentes versiones relacionadas con el caso. La intención no será convertir el crimen en espectáculo, sino reconstruir cada historia con atención y distinguir entre aquello que está comprobado y aquello que todavía permanece como una posibilidad.</p>
+        <p>Cada expediente partirá de una pregunta sencilla que muchas veces resulta más difícil de responder de lo que parece. ¿Qué ocurrió realmente? A partir de ahí, se buscarán los detalles, se ordenarán los acontecimientos y se revisarán aquellos elementos que podrían haber pasado desapercibidos. Una fecha, una declaración, una decisión o una contradicción puede cambiar por completo la manera en que se entiende una historia.</p>
+        <p>La verdad detrás del expediente busca que cada caso sea más que una narración. Cada entrada pretende convertirse en un recorrido por los hechos, donde el lector pueda seguir las pistas, observar la información con atención y descubrir cómo diferentes piezas terminan conectándose entre sí. Algunos expedientes tendrán respuestas claras. Otros dejarán preguntas abiertas. En ambos casos, lo importante será mirar más allá de la primera versión.</p>
+        <p>Cada historia guarda algo que merece una segunda mirada. Tal vez una prueba olvidada, una versión que nunca terminó de convencer o un detalle aparentemente pequeño que cambia todo. Este archivo queda abierto para quienes prefieren observar con cuidado, cuestionar lo evidente y descubrir qué puede esconderse detrás de cada expediente.</p>
+      </article>
+    </div>
+  </section>
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">Destacados</span>
+        <h2>Lo más leído esta semana</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Estos son los expedientes que más atención han generado entre nuestros lectores.</p>
+      </div>
+      <div class="cases-grid">
+        <article class="case-card">
+          <span class="case-tab">EXP-014</span>
+          <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">01</span></div>
+          <div class="case-body">
+            <div class="case-meta"><span class="badge status-open">Sin resolver</span><span>8 min</span></div>
+            <h3>El silencio del barrio norte</h3>
+            <p>Una desaparición que dividió a una comunidad entera y las hipótesis que la policía nunca terminó de investigar.</p>
+            <button class="case-link" data-nav="casos">Leer expediente <span class="arrow">→</span></button>
+          </div>
+        </article>
+        <article class="case-card">
+          <span class="case-tab">EXP-009</span>
+          <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">02</span></div>
+          <div class="case-body">
+            <div class="case-meta"><span class="badge status-closed">Resuelto</span><span>11 min</span></div>
+            <h3>La cifra que no cuadraba</h3>
+            <p>Un fraude financiero disfrazado de negocio familiar, y el error contable que llevó a destaparlo todo.</p>
+            <button class="case-link" data-nav="casos">Leer expediente <span class="arrow">→</span></button>
+          </div>
+        </article>
+        <article class="case-card">
+          <span class="case-tab">EXP-021</span>
+          <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">03</span></div>
+          <div class="case-body">
+            <div class="case-meta"><span class="badge status-analisis">En análisis</span><span>6 min</span></div>
+            <h3>Perfil de un patrón repetido</h3>
+            <p>Analizamos tres casos con similitudes inquietantes que apuntan a un mismo modus operandi.</p>
+            <button class="case-link" data-nav="casos">Leer expediente <span class="arrow">→</span></button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ================= VISTA: CASOS ================= -->
+<section class="view" id="view-casos" data-view="casos">
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">Archivo completo</span>
+        <h2>Todos los casos</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Filtra por estado para encontrar el expediente que buscas.</p>
+      </div>
+      <div class="filter-row">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="abierto">Sin resolver</button>
+        <button class="filter-btn" data-filter="analisis">En análisis</button>
+        <button class="filter-btn" data-filter="cerrado">Resueltos</button>
+      </div>
+      <div class="cases-grid" id="casosGrid">
+
+        <article class="case-card" data-status="abierto">
+          <span class="case-tab">EXP-014</span>
+          <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">01</span></div>
+          <div class="case-body">
+            <div class="case-meta"><span class="badge status-open">Sin resolver</span><span>8 min</span></div>
+            <h3>El silencio del barrio norte</h3>
+            <p>Una desaparición que dividió a una comunidad entera y las hipótesis que la policía nunca terminó de investigar.</p>
+            <button class="case-link">Leer expediente <span class="arrow">→</span></button>
+          </div>
+        </article>
+
+        <article class="case-card" data-status="cerrado">
+          <span class="case-tab">EXP-009</span>
+          <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">02</span></div>
+          <div class="case-body">
+            <div class="case-meta"><span class="badge status-closed">Resuelto</span><span>11 min</span></div>
+            <h3>La cifra que no cuadraba</h3>
+            <p>Un fraude financiero disfrazado de negocio familiar, y el error contable que llevó a destaparlo todo.</p>
+            <button class="case-link">Leer expediente <span class="arrow">→</span></button>
+          </div>
+        </article>
+
+        <article class="case-card" data-status="analisis">
+          <span class="case-tab">EXP-021</span>
+          <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">03</span></div>
+          <div class="case-body">
+            <div class="case-meta"><span class="badge status-analisis">En análisis</span><span>6 min</span></div>
+            <h3>Perfil de un patrón repetido</h3>
+            <p>Analizamos tres casos con similitudes inquietantes que apuntan a un mismo modus operandi.</p>
+            <button class="case-link">Leer expediente <span class="arrow">→</span></button>
+          </div>
+        </article>
+
+        <article class="case-card" data-status="abierto">
+          <span class="case-tab">EXP-027</span>
+          <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">04</span></div>
+          <div class="case-body">
+            <div class="case-meta"><span class="badge status-open">Sin resolver</span><span>9 min</span></div>
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.</p>
+            <button class="case-link">Leer expediente <span class="arrow">→</span></button>
+          </div>
+        </article>
+
+        <article class="case-card" data-status="cerrado">
+          <span class="case-tab">EXP-033</span>
+          <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">05</span></div>
+          <div class="case-body">
+            <div class="case-meta"><span class="badge status-closed">Resuelto</span><span>7 min</span></div>
+            <h3>Ut enim ad minim veniam</h3>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint.</p>
+            <button class="case-link">Leer expediente <span class="arrow">→</span></button>
+          </div>
+        </article>
+
+        <article class="case-card" data-status="analisis">
+          <span class="case-tab">EXP-038</span>
+          <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">06</span></div>
+          <div class="case-body">
+            <div class="case-meta"><span class="badge status-analisis">En análisis</span><span>10 min</span></div>
+            <h3>Excepteur sint occaecat</h3>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.</p>
+            <button class="case-link">Leer expediente <span class="arrow">→</span></button>
+          </div>
+        </article>
+
+        <article class="case-card" data-status="abierto">
+          <span class="case-tab">EXP-041</span>
+          <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">07</span></div>
+          <div class="case-body">
+            <div class="case-meta"><span class="badge status-open">Sin resolver</span><span>5 min</span></div>
+            <h3>Nemo enim ipsam voluptatem</h3>
+            <p>Quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
+            <button class="case-link">Leer expediente <span class="arrow">→</span></button>
+          </div>
+        </article>
+
+        <article class="case-card" data-status="cerrado">
+          <span class="case-tab">EXP-045</span>
+          <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">08</span></div>
+          <div class="case-body">
+            <div class="case-meta"><span class="badge status-closed">Resuelto</span><span>13 min</span></div>
+            <h3>Neque porro quisquam est</h3>
+            <p>Qui dolorem ipsum quia dolor sit amet consectetur adipisci velit sed quia non numquam eius modi tempora.</p>
+            <button class="case-link">Leer expediente <span class="arrow">→</span></button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ================= VISTA: CATEGORÍAS ================= -->
+<section class="view" id="view-categorias" data-view="categorias">
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">Navega por tema</span>
+        <h2>Categorías</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Así se organiza el archivo: cada categoría agrupa expedientes con un enfoque particular.</p>
+      </div>
+      <div class="cat-grid">
+        <div class="cat-item" data-nav="casos">
+          <span class="num">/01</span>
+          <h4>Sin resolver</h4>
+          <p>Casos que siguen abiertos y las hipótesis que quedaron sobre la mesa.</p>
+          <span class="count">12 expedientes</span>
+        </div>
+        <div class="cat-item" data-nav="casos">
+          <span class="num">/02</span>
+          <h4>Crimen organizado</h4>
+          <p>Estructuras, redes y el dinero que las sostiene.</p>
+          <span class="count">8 expedientes</span>
+        </div>
+        <div class="cat-item" data-nav="casos">
+          <span class="num">/03</span>
+          <h4>Perfiles criminales</h4>
+          <p>Retratos psicológicos construidos a partir de evidencia real.</p>
+          <span class="count">15 expedientes</span>
+        </div>
+        <div class="cat-item" data-nav="casos">
+          <span class="num">/04</span>
+          <h4>Análisis forense</h4>
+          <p>Cómo la ciencia ayuda —o falla— al resolver un caso.</p>
+          <span class="count">6 expedientes</span>
+        </div>
+        <div class="cat-item" data-nav="casos">
+          <span class="num">/05</span>
+          <h4>Historias reales</h4>
+          <p>Testimonios y crónicas contadas desde quienes vivieron el caso de cerca.</p>
+          <span class="count">10 expedientes</span>
+        </div>
+        <div class="cat-item" data-nav="casos">
+          <span class="num">/06</span>
+          <h4>Lorem ipsum</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod.</p>
+          <span class="count">4 expedientes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ================= VISTA: ACERCA DE ================= -->
+<section class="view" id="view-sobre" data-view="sobre">
+  <section class="section">
+    <div class="wrap about-grid">
+      <div class="tape-frame">
+        <p><strong>Casos Criminales</strong> es un blog narrativo dedicado a reconstruir casos reales con responsabilidad periodística.</p>
+        <p>No sensacionalizamos el dolor ajeno: contextualizamos, citamos fuentes y separamos el hecho comprobado de la especulación.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.</p>
+        <p>Nuestro público: personas curiosas por el true crime que buscan algo más que un titular llamativo.</p>
+      </div>
+      <div>
+        <div class="section-head" style="margin-bottom:24px;">
+          <span class="section-tag">Cómo funciona el blog</span>
+          <h2 style="font-size:clamp(28px,4vw,38px);">De la pestaña al expediente</h2>
+        </div>
+        <ul class="steps">
+          <li><span class="step-n">01</span><div><h5>Inicio</h5><p>Presenta el expediente activo y los casos destacados de la semana.</p></div></li>
+          <li><span class="step-n">02</span><div><h5>Casos</h5><p>El archivo completo, filtrable por estado: sin resolver, en análisis o resuelto.</p></div></li>
+          <li><span class="step-n">03</span><div><h5>Categorías</h5><p>Navegación temática para quienes buscan un tipo específico de caso.</p></div></li>
+          <li><span class="step-n">04</span><div><h5>Acerca de</h5><p>Nuestra metodología, fuentes y el equipo detrás de cada investigación.</p></div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="section-head" style="margin-top:60px;">
+        <span class="section-tag">Equipo</span>
+        <h2 style="font-size:clamp(28px,4vw,38px);">Quiénes investigan</h2>
+      </div>
+      <div class="team-list">
+        <article class="team-post">
+          <div class="team-post-head">
+            <div class="avatar">H</div>
+            <h5>Harold Molina</h5>
+          </div>
+          <p>Me gusta investigar cualquier cosa en mi tiempo libre por el simple hecho de saber más acerca del mundo y sus personas, el proceso de investigación es algo que disfruto realizar, gracias a esa acción voy comprendiendo primero los antecedentes de un suceso que permite una buena investigación se produzca, comprendiendo qué ha pasado y por qué ha sucedido un hecho.</p>
+          <p>El tema de la criminalidad siempre me resulta algo interesante, principalmente desde la perspectiva de las personas que han realizado el crimen, estudiar sus motivaciones y comprender sus razones, un crimen no suele ser cometido por el simple hecho de hacer mal, siempre hay una razón para cometer, ya sea por razones egoístas o por el desarrollo de un problema que se ha dejado crecer de forma inconsciente o irresponsable.</p>
+          <p>Analizar este tipo de información ayuda principalmente a estar informados de sucesos importantes que puedan estar ocurriendo en nuestra realidad debido al impacto que pueden causar, lo que me destacará será resaltar cuando sea posible la respuesta hacia ambas interrogantes para comprender de mejor manera los casos, incluyendo un resumen general que apoya bastante la lectura para recordar ciertos detalles que pueden haberse olvidado o pasarse por alto. Además, de mencionar e intentar traer como tema de conversación dentro del blog casos criminales antiguos que pueden o no haberse resuelto con el paso del tiempo, tomando en cuenta la misma estructura y recapitulando lo que se conoce y el porqué no se ha podido resolver aún.</p>
+          <p>Mi rol dentro del blog será editor, revisando que cada artículo posea un estilo de redacción unificado para evitar errores gramaticales o agilizar la lectura en las distintas entradas que se presenten dentro del blog.</p>
+        </article>
+
+        <article class="team-post">
+          <div class="team-post-head">
+            <div class="avatar">A</div>
+            <h5>Andre Ramirez</h5>
+          </div>
+          <p>Soy alguien entusiasta del análisis, observador por naturaleza y con un ojo afinado para detectar los detalles que otros suelen pasar por alto. Me fascinan las historias que desafían la lógica y los casos donde las respuestas no son tan evidentes a primera vista.</p>
+          <p>Algo que me interesa es la mente criminal, la psicología detrás de los enigmas más oscuros y la reconstrucción paso a paso de los hechos. Me apasiona analizar pruebas, descubrir patrones y entender qué motiva a una persona a cruzar la línea del misterio.</p>
+          <p>Algo que me motiva para este trabajo es compartir esa fascinación con una comunidad que busque ir más allá de los titulares sensacionalistas. Quiero ofrecer a los lectores un espacio donde podamos informar, cuestionar, teorizar y tener diferentes puntos de vista sobre un mismo caso.</p>
+          <p>Se podría decir que mi rol principal sería Investigador y Redactor de Enigmas. Mi labor es rastrear los datos, verificar los hechos y estructurar las narrativas de cada caso para que la lectura sea informativa, precisa y adictiva.</p>
+          <p>Algo que tal vez me pueda diferenciar y dar mi huella creativa para este blog sería una frase y me ha gustado mucho esta. Mi "Evidencia A": En cada entrada que redacto, dejo una pequeña pista oculta o dato clave escondido entre las líneas. Si lees con suficiente atención, podrás resolver el misterio del artículo antes de llegar al final.</p>
+        </article>
+
+        <article class="team-post">
+          <div class="team-post-head">
+            <div class="avatar">N</div>
+            <h5>Nicole Batres</h5>
+          </div>
+          <p>¡Hola! Soy Nicole, estudiante y creadora de contenido para este blog dedicado al análisis y exposición de casos criminales. Me interesa conocer las historias que se encuentran detrás de distintos acontecimientos, mayormente aquellos casos que generan preguntas, despiertan la curiosidad y permiten comprender de mejor manera los contextos sociales.</p>
+          <p>Una de mis principales características es que disfruto investigando y organizando información para presentarla de una manera visual y llamativa. Mi motivación para formar parte de este proyecto nace de mi interés por investigar y comprender casos reales, analizando los distintos elementos que los rodean, sus antecedentes, procesos de investigación y consecuencias. Además, me interesa aprender a comunicar temas serios de una manera responsable y evitando convertirlos únicamente en entretenimiento.</p>
+          <p>Dentro del proyecto, mi aporte estará enfocado principalmente en la investigación y organización de contenido, procurando que cada publicación tenga una identidad gráfica coherente y ordenada.</p>
+          <p class="team-quote">En este blog te invito a mirar cada caso desde una perspectiva diferente porque: "cada detalle puede contar una historia".</p>
+        </article>
+
+        <article class="team-post">
+          <div class="team-post-head">
+            <div class="avatar">I</div>
+            <h5>Isabella Zelidon</h5>
+          </div>
+          <p>Holaa, ¡yo soy Isaa! Desde pequeña siempre me he considerado una persona muy observadora y sumamente curiosa. Creo que, como muchos aquí, también he encontrado en los casos criminales una forma distinta de entretenerme, porque no solo cuentan una historia, sino que también despiertan muchas preguntas y hacen que uno quiera saber más, además, siempre me ha gustado investigar cuando me encuentro con algo que no se y me genera curiosidad e incluso en situaciones bastante cotidianas. Soy de esas personas que, cuando no entiende algo, prefiere buscar un poco más antes de simplemente dejarlo pasar. Creo que por eso este proyecto me llamó la atención desde el inicio, ya que combina investigación y una temática que personalmente me parece muy interesante.</p>
+          <p>Dentro de La verdad detrás del expediente siento que puedo aportar bastante desde la parte creativa, especialmente en el diseño y la redacción. Me gusta que las cosas se vean bien, pero también que tengan sentido y sean fáciles de seguir. Quiero que el blog tenga una identidad propia y que cada publicación se sienta bien trabajada, manteniendo siempre ese toque de misterio que hace que uno quiera seguir leyendo.</p>
+          <p>¡Nos vemos en mis próximas entradas!</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section class="newsletter" id="suscribete">
+  <div class="wrap newsletter-inner">
+    <div>
+      <h3>Súmate a la investigación</h3>
+      <p>Recibe un expediente nuevo cada semana, directo a tu correo.</p>
+    </div>
+    <form class="nform" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Suscrito ✓';">
+      <input type="email" placeholder="tu@correo.com" required aria-label="Correo electrónico">
+      <button type="submit">Suscribirme</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand" data-nav="inicio">
+          <span class="mark">CC</span>
+          <div class="name">CASOS<span>.</span>CRIMINALES</div>
+        </div>
+        <p>Investigación narrativa sobre casos criminales reales, con enfoque ético y verificación de fuentes.</p>
+      </div>
+      <div>
+        <h6>Navegación</h6>
+        <ul>
+          <li><button data-nav="inicio">Inicio</button></li>
+          <li><button data-nav="casos">Casos</button></li>
+          <li><button data-nav="categorias">Categorías</button></li>
+          <li><button data-nav="sobre">Acerca de</button></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Síguenos</h6>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Casos Criminales — Prototipo académico</span>
+      <span>Universidad Don Bosco · Escuela de Comunicación</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
