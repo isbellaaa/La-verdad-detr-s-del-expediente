@@ -50,13 +50,13 @@
           <button class="btn btn-ghost" data-nav="sobre">Cómo investigamos</button>
         </div>
       </div>
-      <div class="board">
+      <div class="board" data-nav="caso-pike" role="button" tabindex="0" title="Leer el expediente">
         <span class="pin"></span>
-        <div class="board-row"><span class="label">Expediente</span><span class="val">EXP-014</span></div>
-        <div class="board-row"><span class="label">Categoría</span><span class="val">Sin resolver</span></div>
-        <div class="board-row"><span class="label">Ubicación</span><span class="val">Archivo regional</span></div>
-        <div class="board-row"><span class="label">Estado</span><span class="val open">Abierto</span></div>
-        <div class="board-row"><span class="label">Última entrada</span><span class="val">Hoy</span></div>
+        <div class="board-row"><span class="label">Expediente</span><span class="val">EXP-002</span></div>
+        <div class="board-row"><span class="label">Categoría</span><span class="val">Historias reales</span></div>
+        <div class="board-row"><span class="label">Ubicación</span><span class="val">Nashville, Tennessee</span></div>
+        <div class="board-row"><span class="label">Estado</span><span class="val open">En desarrollo</span></div>
+        <div class="board-row"><span class="label">Última entrada</span><span class="val">6 oct 2026</span></div>
       </div>
     </div>
   </div>
@@ -78,42 +78,57 @@
   <section class="section section-alt">
     <div class="wrap">
       <div class="section-head">
-        <span class="section-tag">Destacados</span>
-        <h2>Lo más leído esta semana</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Estos son los expedientes que más atención han generado entre nuestros lectores.</p>
+        <span class="section-tag">Primeros expedientes</span>
+        <h2>Lo nuevo en el archivo</h2>
+        <p>Los primeros casos publicados en el blog, trabajados con fuentes citadas y separando lo comprobado de lo que sigue siendo una hipótesis.</p>
       </div>
-      <div class="cases-grid">
-        <article class="case-card">
-          <span class="case-tab">EXP-014</span>
+      <div class="cases-grid" id="inicioGrid">
+        <article class="case-card" data-status="cerrado" data-cat="perfiles forense">
+          <span class="case-tab">EXP-001</span>
           <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">01</span></div>
           <div class="case-body">
-            <div class="case-meta"><span class="badge status-open">Sin resolver</span><span>8 min</span></div>
-            <h3>El silencio del barrio norte</h3>
-            <p>Una desaparición que dividió a una comunidad entera y las hipótesis que la policía nunca terminó de investigar.</p>
-            <button class="case-link" data-nav="casos">Leer expediente <span class="arrow">→</span></button>
+            <div class="case-meta"><span class="badge status-closed">Cerrado</span><span>12 min</span></div>
+            <h3>Ted Bundy y los homicidios de la Chi Omega</h3>
+            <p>Una madrugada de enero de 1978 en una casa de hermandad de Tallahassee, y las pruebas que llevaron a Bundy ante un jurado.</p>
+            <span class="case-cat">Perfiles criminales · Análisis forense</span>
+            <button class="case-link" data-nav="caso-bundy">Leer expediente <span class="arrow">→</span></button>
           </div>
         </article>
-        <article class="case-card">
-          <span class="case-tab">EXP-009</span>
+        <article class="case-card" data-status="desarrollo" data-cat="historias">
+          <span class="case-tab">EXP-002</span>
           <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">02</span></div>
           <div class="case-body">
-            <div class="case-meta"><span class="badge status-closed">Resuelto</span><span>11 min</span></div>
-            <h3>La cifra que no cuadraba</h3>
-            <p>Un fraude financiero disfrazado de negocio familiar, y el error contable que llevó a destaparlo todo.</p>
-            <button class="case-link" data-nav="casos">Leer expediente <span class="arrow">→</span></button>
+            <div class="case-meta"><span class="badge status-analisis">En desarrollo</span><span>10 min</span></div>
+            <h3>Christa Pike: la mujer que sobrevivió a dos dosis de inyección letal</h3>
+            <p>Una historia de 1995 que, 31 años después, terminó en una de las noticias más raras y polémicas de la pena de muerte en Estados Unidos.</p>
+            <span class="case-cat">Historias reales</span>
+            <button class="case-link" data-nav="caso-pike">Leer expediente <span class="arrow">→</span></button>
           </div>
         </article>
-        <article class="case-card">
-          <span class="case-tab">EXP-021</span>
+        <article class="case-card" data-status="cerrado" data-cat="perfiles">
+          <span class="case-tab">EXP-003</span>
           <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">03</span></div>
           <div class="case-body">
-            <div class="case-meta"><span class="badge status-analisis">En análisis</span><span>6 min</span></div>
-            <h3>Perfil de un patrón repetido</h3>
-            <p>Analizamos tres casos con similitudes inquietantes que apuntan a un mismo modus operandi.</p>
-            <button class="case-link" data-nav="casos">Leer expediente <span class="arrow">→</span></button>
+            <div class="case-meta"><span class="badge status-closed">Cerrado</span><span>6 min</span></div>
+            <h3>El caso de Issei Sagawa</h3>
+            <p>El crimen de París, la grieta entre dos sistemas judiciales y la memoria de Renée Hartevelt.</p>
+            <span class="case-cat">Perfiles criminales</span>
+            <button class="case-link" data-nav="caso-sagawa">Leer expediente <span class="arrow">→</span></button>
+          </div>
+        </article>
+        <article class="case-card" data-status="abierto" data-cat="sinresolver">
+          <span class="case-tab">EXP-004</span>
+          <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">04</span></div>
+          <div class="case-body">
+            <div class="case-meta"><span class="badge status-open">Sin resolver</span><span>10 min</span></div>
+            <h3>Elizabeth Short, La Dalia Negra</h3>
+            <p>Un cuerpo hallado en un terreno de Los Ángeles en 1947, una cobertura mediática cuestionable y un caso que sigue sin responsable.</p>
+            <span class="case-cat">Sin resolver</span>
+            <button class="case-link" data-nav="caso-dalia">Leer expediente <span class="arrow">→</span></button>
           </div>
         </article>
       </div>
+      <div style="margin-top:36px;"><button class="btn btn-ghost" data-nav="casos">Ver todos los casos →</button></div>
     </div>
   </section>
 </section>
@@ -125,105 +140,65 @@
       <div class="section-head">
         <span class="section-tag">Archivo completo</span>
         <h2>Todos los casos</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Filtra por estado para encontrar el expediente que buscas.</p>
+        <p>El archivo completo de expedientes. Filtra por estado para encontrar el caso que buscas.</p>
       </div>
       <div class="filter-row">
         <button class="filter-btn active" data-filter="todos">Todos</button>
         <button class="filter-btn" data-filter="abierto">Sin resolver</button>
-        <button class="filter-btn" data-filter="analisis">En análisis</button>
-        <button class="filter-btn" data-filter="cerrado">Resueltos</button>
+        <button class="filter-btn" data-filter="desarrollo">En desarrollo</button>
+        <button class="filter-btn" data-filter="cerrado">Cerrados</button>
+      </div>
+      <div class="active-filter" id="activeFilter" hidden>
+        Categoría: <strong id="activeFilterLabel"></strong>
+        <button id="clearCat" aria-label="Quitar filtro de categoría">✕ Quitar</button>
       </div>
       <div class="cases-grid" id="casosGrid">
-
-        <article class="case-card" data-status="abierto">
-          <span class="case-tab">EXP-014</span>
+        <article class="case-card" data-status="cerrado" data-cat="perfiles forense">
+          <span class="case-tab">EXP-001</span>
           <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">01</span></div>
           <div class="case-body">
-            <div class="case-meta"><span class="badge status-open">Sin resolver</span><span>8 min</span></div>
-            <h3>El silencio del barrio norte</h3>
-            <p>Una desaparición que dividió a una comunidad entera y las hipótesis que la policía nunca terminó de investigar.</p>
-            <button class="case-link">Leer expediente <span class="arrow">→</span></button>
+            <div class="case-meta"><span class="badge status-closed">Cerrado</span><span>12 min</span></div>
+            <h3>Ted Bundy y los homicidios de la Chi Omega</h3>
+            <p>Una madrugada de enero de 1978 en una casa de hermandad de Tallahassee, y las pruebas que llevaron a Bundy ante un jurado.</p>
+            <span class="case-cat">Perfiles criminales · Análisis forense</span>
+            <button class="case-link" data-nav="caso-bundy">Leer expediente <span class="arrow">→</span></button>
           </div>
         </article>
-
-        <article class="case-card" data-status="cerrado">
-          <span class="case-tab">EXP-009</span>
+        <article class="case-card" data-status="desarrollo" data-cat="historias">
+          <span class="case-tab">EXP-002</span>
           <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">02</span></div>
           <div class="case-body">
-            <div class="case-meta"><span class="badge status-closed">Resuelto</span><span>11 min</span></div>
-            <h3>La cifra que no cuadraba</h3>
-            <p>Un fraude financiero disfrazado de negocio familiar, y el error contable que llevó a destaparlo todo.</p>
-            <button class="case-link">Leer expediente <span class="arrow">→</span></button>
+            <div class="case-meta"><span class="badge status-analisis">En desarrollo</span><span>10 min</span></div>
+            <h3>Christa Pike: la mujer que sobrevivió a dos dosis de inyección letal</h3>
+            <p>Una historia de 1995 que, 31 años después, terminó en una de las noticias más raras y polémicas de la pena de muerte en Estados Unidos.</p>
+            <span class="case-cat">Historias reales</span>
+            <button class="case-link" data-nav="caso-pike">Leer expediente <span class="arrow">→</span></button>
           </div>
         </article>
-
-        <article class="case-card" data-status="analisis">
-          <span class="case-tab">EXP-021</span>
+        <article class="case-card" data-status="cerrado" data-cat="perfiles">
+          <span class="case-tab">EXP-003</span>
           <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">03</span></div>
           <div class="case-body">
-            <div class="case-meta"><span class="badge status-analisis">En análisis</span><span>6 min</span></div>
-            <h3>Perfil de un patrón repetido</h3>
-            <p>Analizamos tres casos con similitudes inquietantes que apuntan a un mismo modus operandi.</p>
-            <button class="case-link">Leer expediente <span class="arrow">→</span></button>
+            <div class="case-meta"><span class="badge status-closed">Cerrado</span><span>6 min</span></div>
+            <h3>El caso de Issei Sagawa</h3>
+            <p>El crimen de París, la grieta entre dos sistemas judiciales y la memoria de Renée Hartevelt.</p>
+            <span class="case-cat">Perfiles criminales</span>
+            <button class="case-link" data-nav="caso-sagawa">Leer expediente <span class="arrow">→</span></button>
           </div>
         </article>
-
-        <article class="case-card" data-status="abierto">
-          <span class="case-tab">EXP-027</span>
+        <article class="case-card" data-status="abierto" data-cat="sinresolver">
+          <span class="case-tab">EXP-004</span>
           <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">04</span></div>
           <div class="case-body">
-            <div class="case-meta"><span class="badge status-open">Sin resolver</span><span>9 min</span></div>
-            <h3>Lorem ipsum dolor sit amet</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.</p>
-            <button class="case-link">Leer expediente <span class="arrow">→</span></button>
+            <div class="case-meta"><span class="badge status-open">Sin resolver</span><span>10 min</span></div>
+            <h3>Elizabeth Short, La Dalia Negra</h3>
+            <p>Un cuerpo hallado en un terreno de Los Ángeles en 1947, una cobertura mediática cuestionable y un caso que sigue sin responsable.</p>
+            <span class="case-cat">Sin resolver</span>
+            <button class="case-link" data-nav="caso-dalia">Leer expediente <span class="arrow">→</span></button>
           </div>
         </article>
-
-        <article class="case-card" data-status="cerrado">
-          <span class="case-tab">EXP-033</span>
-          <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">05</span></div>
-          <div class="case-body">
-            <div class="case-meta"><span class="badge status-closed">Resuelto</span><span>7 min</span></div>
-            <h3>Ut enim ad minim veniam</h3>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint.</p>
-            <button class="case-link">Leer expediente <span class="arrow">→</span></button>
-          </div>
-        </article>
-
-        <article class="case-card" data-status="analisis">
-          <span class="case-tab">EXP-038</span>
-          <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">06</span></div>
-          <div class="case-body">
-            <div class="case-meta"><span class="badge status-analisis">En análisis</span><span>10 min</span></div>
-            <h3>Excepteur sint occaecat</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.</p>
-            <button class="case-link">Leer expediente <span class="arrow">→</span></button>
-          </div>
-        </article>
-
-        <article class="case-card" data-status="abierto">
-          <span class="case-tab">EXP-041</span>
-          <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">07</span></div>
-          <div class="case-body">
-            <div class="case-meta"><span class="badge status-open">Sin resolver</span><span>5 min</span></div>
-            <h3>Nemo enim ipsam voluptatem</h3>
-            <p>Quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
-            <button class="case-link">Leer expediente <span class="arrow">→</span></button>
-          </div>
-        </article>
-
-        <article class="case-card" data-status="cerrado">
-          <span class="case-tab">EXP-045</span>
-          <div class="case-media"><div class="redact-bar">CLASIFICADO</div><span class="icon">08</span></div>
-          <div class="case-body">
-            <div class="case-meta"><span class="badge status-closed">Resuelto</span><span>13 min</span></div>
-            <h3>Neque porro quisquam est</h3>
-            <p>Qui dolorem ipsum quia dolor sit amet consectetur adipisci velit sed quia non numquam eius modi tempora.</p>
-            <button class="case-link">Leer expediente <span class="arrow">→</span></button>
-          </div>
-        </article>
-
       </div>
+      <p class="empty-msg" id="emptyMsg" hidden>Todavía no hay expedientes con este filtro. Próximamente.</p>
     </div>
   </section>
 </section>
@@ -235,44 +210,38 @@
       <div class="section-head">
         <span class="section-tag">Navega por tema</span>
         <h2>Categorías</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Así se organiza el archivo: cada categoría agrupa expedientes con un enfoque particular.</p>
+        <p>Así se organiza el archivo: cada categoría agrupa expedientes con un enfoque particular. Haz clic en una para ver sus casos.</p>
       </div>
       <div class="cat-grid">
-        <div class="cat-item" data-nav="casos">
+        <div class="cat-item" data-cat-filter="sinresolver" role="button" tabindex="0">
           <span class="num">/01</span>
           <h4>Sin resolver</h4>
           <p>Casos que siguen abiertos y las hipótesis que quedaron sobre la mesa.</p>
-          <span class="count">12 expedientes</span>
+          <span class="count">1 expediente</span>
         </div>
-        <div class="cat-item" data-nav="casos">
+        <div class="cat-item" data-cat-filter="organizado" role="button" tabindex="0">
           <span class="num">/02</span>
           <h4>Crimen organizado</h4>
           <p>Estructuras, redes y el dinero que las sostiene.</p>
-          <span class="count">8 expedientes</span>
+          <span class="count">Próximamente</span>
         </div>
-        <div class="cat-item" data-nav="casos">
+        <div class="cat-item" data-cat-filter="perfiles" role="button" tabindex="0">
           <span class="num">/03</span>
           <h4>Perfiles criminales</h4>
           <p>Retratos psicológicos construidos a partir de evidencia real.</p>
-          <span class="count">15 expedientes</span>
+          <span class="count">2 expedientes</span>
         </div>
-        <div class="cat-item" data-nav="casos">
+        <div class="cat-item" data-cat-filter="forense" role="button" tabindex="0">
           <span class="num">/04</span>
           <h4>Análisis forense</h4>
           <p>Cómo la ciencia ayuda —o falla— al resolver un caso.</p>
-          <span class="count">6 expedientes</span>
+          <span class="count">1 expediente</span>
         </div>
-        <div class="cat-item" data-nav="casos">
+        <div class="cat-item" data-cat-filter="historias" role="button" tabindex="0">
           <span class="num">/05</span>
           <h4>Historias reales</h4>
-          <p>Testimonios y crónicas contadas desde quienes vivieron el caso de cerca.</p>
-          <span class="count">10 expedientes</span>
-        </div>
-        <div class="cat-item" data-nav="casos">
-          <span class="num">/06</span>
-          <h4>Lorem ipsum</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod.</p>
-          <span class="count">4 expedientes</span>
+          <p>Crónicas contadas desde el contexto humano que rodeó cada caso.</p>
+          <span class="count">1 expediente</span>
         </div>
       </div>
     </div>
@@ -296,7 +265,7 @@
         </div>
         <ul class="steps">
           <li><span class="step-n">01</span><div><h5>Inicio</h5><p>Presenta el expediente activo y los casos destacados de la semana.</p></div></li>
-          <li><span class="step-n">02</span><div><h5>Casos</h5><p>El archivo completo, filtrable por estado: sin resolver, en análisis o resuelto.</p></div></li>
+          <li><span class="step-n">02</span><div><h5>Casos</h5><p>El archivo completo, filtrable por estado: sin resolver, en desarrollo o cerrado.</p></div></li>
           <li><span class="step-n">03</span><div><h5>Categorías</h5><p>Navegación temática para quienes buscan un tipo específico de caso.</p></div></li>
           <li><span class="step-n">04</span><div><h5>Acerca de</h5><p>Nuestra metodología, fuentes y el equipo detrás de cada investigación.</p></div></li>
         </ul>
@@ -347,13 +316,239 @@
             <div class="avatar">I</div>
             <h5>Isabella Zelidon</h5>
           </div>
-          <p>Holaa, ¡yo soy Isaa! Desde pequeña siempre me he considerado una persona muy observadora y sumamente curiosa. Creo que, como muchos aquí, también he encontrado en los casos criminales una forma distinta de entretenerme, porque no solo cuentan una historia, sino que también despiertan muchas preguntas y hacen que uno quiera saber más, además, siempre me ha gustado investigar cuando me encuentro con algo que no se y me genera curiosidad e incluso en situaciones bastante cotidianas. Soy de esas personas que, cuando no entiende algo, prefiere buscar un poco más antes de simplemente dejarlo pasar. Creo que por eso este proyecto me llamó la atención desde el inicio, ya que combina investigación y una temática que personalmente me parece muy interesante.</p>
-          <p>Dentro de La verdad detrás del expediente siento que puedo aportar bastante desde la parte creativa, especialmente en el diseño y la redacción. Me gusta que las cosas se vean bien, pero también que tengan sentido y sean fáciles de seguir. Quiero que el blog tenga una identidad propia y que cada publicación se sienta bien trabajada, manteniendo siempre ese toque de misterio que hace que uno quiera seguir leyendo.</p>
-          <p>¡Nos vemos en mis próximas entradas!</p>
+          <p>¡Yo soy Isaa! Desde pequeña siempre me he considerado una persona muy observadora y curiosa. Creería que como todos aquí, también he encontrado en los casos criminales una forma distinta de entretenerme, porque no solo cuentan una historia, además siempre me ha gustado investigar cuando algo me genera curiosidad, incluso en cosas bastante cotidianas. Soy de esas personas que, cuando no entiende algo, prefiere buscar un poco más antes de simplemente dejarlo pasar. Creo que por eso este proyecto me llamó la atención desde el inicio, porque combina investigación, redacción y una temática que personalmente me parece interesante.</p>
+          <p>Dentro de La verdad detrás del expediente siento que puedo aportar bastante desde la parte creativa, especialmente en el diseño y la redacción. Me gusta que las cosas se vean bien, pero también que tengan sentido y sean fáciles de seguir. Quiero que el blog tenga una identidad propia y que cada publicación se sienta seria, interesante y bien trabajada, sin perder ese toque de misterio que hace que uno quiera seguir leyendo. ¡Nos vemos en mis próximas entradas!</p>
         </article>
       </div>
     </div>
   </section>
+</section>
+
+<!-- ================= EXPEDIENTE: EXP-001 ================= -->
+<section class="view" id="view-caso-bundy" data-view="caso-bundy">
+  <article class="entry">
+    <button class="back-link" data-nav="casos">← Volver a los casos</button>
+    <header class="entry-head">
+      <div class="entry-top"><span class="entry-num">EXP-001</span><span class="badge status-closed">Cerrado</span><span class="entry-time">12 min de lectura</span></div>
+      <h1>Ted Bundy y los homicidios de la Chi Omega</h1>
+      <div class="entry-cats"><button class="chip" data-cat-filter="perfiles">Perfiles criminales</button><button class="chip" data-cat-filter="forense">Análisis forense</button></div>
+    </header>
+    <div class="entry-body">
+      <blockquote class="entry-quote">“Sientes el último aliento saliendo de su cuerpo, la estás mirando a los ojos. ¡Una persona en esa situación es Dios!” – Ted Bundy</blockquote>
+      <p>Este es el caso de los homicidios de la Chi Omega en florida por Ted Bundy.</p>
+      <p>Ted Bundy nacido el 24 de noviembre de 1946 en Burlington, fue un asesino en serie y violador estadounidense, uno de los criminales más notorios de finales del siglo XX.</p>
+      <p>Las víctimas principales de este caso fueron reconocidas como: Lisa Levy y Margaret Bowman.</p>
+      <p>Lisa Levy tenía 20 años quien era descrita por ser una chica “brillante” que estaba “llena de potencial”, nació en St. Petersburg, Florida. Estudió en la escuela de Dixie Hollins High School, después de graduarse, Lisa empezó a asistir a la Florida State University, en Talahasee, para estudiar merchandising de moda. Lisa era miembro de la fraternidad Chi Omega de la FSU. Se mantenía en contacto con su familia, y vivía con su mamá cuando tenía vacaciones. La casa de la hermandad Chi Omega se encuentra justo a las afueras del campus de la Universidad Estatal de Florida, era el epicentro de a vida social del campus.</p>
+      <p>Margaret Bowman acababa de cumplir 21 años, era hija de Jackson Bowman III y Runelle Bowman, Margaret nació en Honolulu y se mudó a St. Pete cuando era adolescente en 1973 después de que su padre se retirara de la U.S. Fuerza Aérea. Se graduó de la secundaria de San Petersburgo, donde fue presidenta de la sociedad Nacional de Honor francesa y miembro del club de teatro, club de buceo, equipo de tenis y del club de servicio Civinettes. Margaret estudiaba historia del arte y civilizaciones clásicas en la Universidad Estatal d Florida en 1978. La última vez que su padre supo de ella fue cuando ella lo llamó al regresar a Tallahasee para decirle que había llegado a salvo, ya que había viajado de regreso a San Petersburgo el fin de semana anterior para celebrar su cumpleaños con su familia.</p>
+      <p>En enero de 1978 Ted Bundy, merodeaba buscando jóvenes para convertirlas en sus próximas víctimas. El 15 de enero, pocos días después de llegar a Tallahasee, Bundy entró a la casa de la hermandad Chi Omega, por una puerta trasera con una cerradura defectuosa. Entró a la habitación de Margaret Bowman la golpeó con un trozo de madera mientras dormía y la estranguló con una media de nailon. Luego, entró a la habitación de Lisa Lev, de igual forma la golpeó hasta dejarla inconsciente, la mordió y la agredió sexualmente con un bote de laca para el cabello. También atacó a otras 2 víctimas, Karen Chandler y Kathy Kleiner, quienes con suerte sobrevivieron.</p>
+      <p>Tras lo sucedido, simplemente huyó de la casa de la hermandad, corrió hacia el oeste, a la calle Dunwoody, presa de una especie de frenesí psicopático, donde irrumpió en el apartamento de Cheryl Thomas, otra estudiante de la FSU, y la golpeó. Ella sobrevivió, pero quedó con discapacidades permanentes. Entonces, Bundy, como el vampiro que era, se escabulló en la noche antes del amanecer.</p>
+      <p>El agente de policía de la FSU, Ray Crew, patrullaba la avenida Woodward, a pocas cuadras de distancia, cuando recibió una llamada para acudir a la casa de la hermandad Chi Omega. Al parecer, la persona que reportó el incidente lo describió como una pelea entre novios tras ver únicamente a una de las mujeres heridas. El agente de policía de Tallahasee, Oscar Brannon, patrullaba la calle West Tennessee cuando fue enviado a atender lo que se describió como un altercado doméstico. Llegó casi al mismo tiempo que el agente Crew. Brannon, junto con el agente de policía de la FSU, Bill Taylor, comenzó a entrevistar a una de las residentes que había visto al sospechoso huir de la casa de la hermandad. El agente Crew subió y poco después llamó a Brannon para que lo acompañara.</p>
+      <p>El oficial Crew encontró a la primera víctima en el piso de arriba. Estaba herida y llorando, pero coherente. Luego localizó a la siguiente víctima en otra habitación. Tenía la mandíbula herida, lloraba y estaba completamente incoherente. El oficial Crew se dio cuenta de que no se trataba de una simple agresión doméstica. Para entonces, las integrantes de la hermandad se estaban reuniendo en el pasillo. Alguien dijo que Margaret Bowman no había salido de su habitación. Después de llamar a la puerta, la abrió y vio sangre en las paredes y a Bowman en su cama desordenada. Luego entró en la habitación de Lisa Levy, apartó las sábanas de su cama y observó sus graves heridas. Los paramédicos que acudieron creyeron detectar latidos y la trasladaron al hospital. El oficial Brannon estaba realizando una entrevista inicial con Karen Chandler, una de las víctimas supervivientes, cuando se dio cuenta de que su familia vivía en Tallahassee. Hizo que la central de emergencias llamara a su familia para que la encontraran en el hospital. El sargento Howard Winkler, supervisor de la investigación de la escena del crimen de la policía de Tallahassee, llegó para comenzar la investigación con la ayuda del agente Brannon. En el lugar se encontró una extremidad utilizada en los asesinatos. Brannon midió y dibujó un diagrama a escala de las virutas de corteza halladas en el suelo y del probable punto de entrada por donde se introdujo la extremidad en la casa de la hermandad. Su dibujo se presentó posteriormente en el juicio. El sargento Winkler también fotografió a escala una marca de mordedura en Lisa Levy, esta evidencia resultó crucial en el juicio posterior. La investigadora de la escena del crimen de la Oficina del Sheriff del Condado de Leon, Maryann Frisby, recibió una llamada similar para acudir al Hospital Memorial de Tallahassee. Lisa Levy había sido trasladada allí en ambulancia, donde falleció. La investigadora Frisby fue enviada entonces al lugar de los hechos en la calle Dunwoody. Cheryl Thomas, la víctima, también estaba siendo trasladada al hospital. Ella solicitó refuerzos para proteger la escena y varios agentes de la policía de Tallahassee acudieron al lugar. Entre otras pruebas, encontró un pasamontaña que Bundy había usado. Posteriormente se determinó que contenía cabello de Bundy. Esta evidencia fue de suma importancia más adelante en el juicio.</p>
+      <p>De vuelta en la casa de Chi Omega, al amanecer, formaron un equipo organizado para delimitar y registrar el perímetro exterior del edificio, así como otras áreas contiguas. En ese momento, no sabían qué buscar, por lo que se recogieron muchos objetos insignificantes. George, era el sargento de homicidios de la Oficina del Sheriff del Condado de Leon y estaba organizando la investigación del interior del edificio. El teléfono del sargento Jim Sewell sonó a las 3:26 de la madrugada. Como asistente del jefe y oficial de información pública del departamento de policía de la FSU, le estaban informando de los asesinatos. Había estado despierto hasta tarde esa noche en la biblioteca investigando para su tesis doctoral en criminología, pero rápidamente comprendió la situación, se puso manos a la obra y se puso a trabajar. Su principal preocupación era garantizar la seguridad del campus. Más tarde ese mismo día, se organizó una reunión con todos los asesores y administradores de las residencias estudiantiles, fraternidades y hermandades para informarles de lo sucedido y comenzar a reforzar la seguridad dentro y fuera del campus. Jerry Demings, asesor residencial de Kellam Hall, asistió a la reunión. Otro estudiante destacado presente en la reunión fue el presidente de la fraternidad, Rick Baker, exalcalde de San Petersburgo y prominente abogado del condado de Pinellas. El agente Jim Murdaugh, de la Oficina del Sheriff del Condado de Leon, fue asignado para colaborar con la Unidad de Prevención del Delito de la Universidad Estatal de Florida (FSU).</p>
+      <p>El miedo y el pánico se apoderaron de la población estudiantil en las semanas siguientes. Muchos estudiantes simplemente se fueron a casa y nunca regresaron. Surgió otro problema cuando personas curiosas, algunas de ellas de fuera de la ciudad, transitaron repetidamente por el campus. Si bien los administradores de la universidad habían dado a la policía de la FSU carta blanca para la financiación, se tuvieron que invertir valiosos recursos para identificar y documentar a estas personas ajenas a la universidad. Y luego estaban los autoproclamados psíquicos, chiflados y excéntricos que siempre parecían aparecer de la nada para ofrecer su perspectiva sobre quién era el responsable, consumiendo aún más tiempo valioso.</p>
+      <p>Bundy fue a parar a Pensacola, Florida, donde las placas de uno de sus autos robados fueron reconocidas por el policía de patrulla David Lee, que lo detuvo después de una corta persecución y una breve lucha. Era la tercera vez que era detenido por temas de tráfico.</p>
+      <p>El 17 de febrero de 1978, un mes después del atentado de Chi Omega, se le tomó declaración y reveló su nombre, ya que había dudas sobre su identidad, dado el diferente modus operandi observado en Florida.</p>
+      <p>A lo largo del tiempo, el 25 de junio de 1979, en Miami (Florida), se le juzgó por los crímenes de la fraternidad Chi Omega. Fueron nombrados como los «delitos de la década», y tuvieron tal impacto en la opinión pública que hicieron que gran parte de los estadounidenses consideraran a Bundy como la encarnación del mal.</p>
+      <p>Bundy prescindió de abogado y se defendió a sí mismo, pero las evidencias contra él serían aplastantes. Primero fue el testimonio de Nita Neary, que lo señaló como el hombre al que vio salir de la fraternidad con una gorra puesta. Después subió al estrado el odontólogo Richard Souviron, quien determinó que las marcas de dientes encontradas en el cuerpo de Levy coincidían con la dentadura de Bundy. Testigos de cargo y descargo fueron llamados por ambos lados (incluyendo a Louise Bundy) para la defensa. Bundy lloró durante el testimonio de su madre (una muestra de emoción fingida). Al jurado se le permitió escuchar los detalles del secuestro de DaRonch. El 24 de julio de 1979, tras seis horas y media de deliberación, el jurado lo declaró culpable. Él escuchó el veredicto sin mostrar ninguna emoción, a diferencia de su madre, quien suplicó piedad. Bundy afirmó ser víctima de una farsa, de un juicio injusto y abusivo, por lo que no tenía que pedir clemencia por algo que no había cometido. El juez Cowart lo sentenció a la pena de muerte en la silla eléctrica por los asesinatos de Lisa Levy y Margaret Bowman.</p>
+      <p>Nada fue fácil con Bundy y su ejecución no sería diferente. Siguió proclamando su inocencia y metódicamente agotó sus apelaciones. Representándose a sí mismo obtuvo numerosos retrasos a la ejecución, la primera el 4 de marzo de 1986, incluyendo unos quince minutos antes de la hora programada para morir, la segunda el 2 de julio de 1986, y otra el 18 de noviembre, a tan solo siete horas de la ejecución.</p>
+      <p>Bundy usaba y abusaba de su encanto personal y no dudó en utilizar esta capacidad en su lucha por retrasar su final. Resaltando tal rasgo, el criminólogo Robert Ressler estima que Bundy se favoreció, dado que la prensa interpretó mal aquel encanto personal suyo. Señala que, a diferencia de la imagen que de él brindaban los medios de comunicación, este no era «el divino asesino en serie, sino un hombre brutal, sádico y pervertido».</p>
+      <p>Buscando aplazar el cumplimiento de su sentencia, le confesó al doctor Bob Keppel, jefe de investigadores del Departamento de Justicia de Washington D. C., con quien había colaborado tiempo atrás en la búsqueda de Gary Ridgway (asesino en serie conocido como The Green River Killer), algunos de los lugares en donde había abandonado los cuerpos de unas cuantas de sus víctimas. La conducta de Bundy fue catalogada como perversión y compulsión necrofílica.</p>
+      <p>El 17 de enero de 1989, obtuvo la fecha definitiva: iba a ser ejecutado una semana después. Bundy no había terminado su lucha para evitar la muerte y trató de mantener sus confesiones como cebo para obtener más tiempo de esa forma. Él y sus abogados pidieron una prórroga de tres años para que confesara los demás asesinatos. También trató de coaccionar a los familiares de sus víctimas para que solicitaran a la corte que le otorgaran más tiempo para poder confesar. A pesar de no conocerse el paradero de muchas de las víctimas, todas las familias se negaron.</p>
+      <p>Mientras permaneció encerrado, trató de diferir al máximo la fecha de su ejecución y fingió haber perpetrado mayor número de asesinatos, inventándose detalles y proporcionando datos inconexos para así ganar tiempo con las reconstrucciones y búsquedas. Llegó al colmo de proponer ayudar a las autoridades a detener a otros asesinos en serie, aprovechando que por aquel entonces hacía estragos el llamado caso del «asesino de Green River», otra secuencia de muertes violentas cometidas a prostitutas.</p>
+      <p>Bundy celebró un maratón de entrevistas y confesiones durante sus últimos días, aunque nunca estuvo dispuesto a admitir todo, especialmente los asesinatos de algunas de las víctimas más jóvenes. En su último día llamó a su madre y rechazó su última comida. Fue electrocutado en la silla eléctrica el 24 de enero de 1989 y declarado muerto a las 07:16 a. m. Fue incinerado y sus cenizas fueron esparcidas en la cordillera de las Cascadas.</p>
+      <p>Casos como este nos enseñan que la violencia se puede manifestar de formas que no siempre identificamos a tiempo. Por ello es importante aprender a escuchar y seguir SIEMPRE a nuestra intuición, prestar atención a distintas señales de alerta, cuidarnos entre nosotros y sobre todo nunca guardar silencio ante una situación que nos haga sentir en peligro. Que conocer el pasado nos ayude a ser más conscientes, solidarios y atentos en el presente, porque la seguridad y el bienestar de cada persona es responsabilidad de todos.</p>
+    </div>
+    <section class="entry-refs">
+      <h4>Referencias</h4>
+      <ul>
+        <li><a href="https://www.britannica.com/topic/How-Many-People-Did-Ed-Gein-Kill" target="_blank" rel="noopener">https://www.britannica.com/topic/How-Many-People-Did-Ed-Gein-Kill</a></li>
+        <li><a href="https://www.bbc.com/mundo/articles/cn53ky6y7q3o.amp" target="_blank" rel="noopener">https://www.bbc.com/mundo/articles/cn53ky6y7q3o.amp</a></li>
+        <li><a href="https://abcnews.com/US/timeline-ted-bundys-brutal-crimes/story?id=61077236" target="_blank" rel="noopener">https://abcnews.com/US/timeline-ted-bundys-brutal-crimes/story?id=61077236</a></li>
+        <li><a href="https://www.imdb.com/es/name/nm0120421/quotes/" target="_blank" rel="noopener">https://www.imdb.com/es/name/nm0120421/quotes/</a></li>
+        <li><a href="https://historylink.org/File/2637" target="_blank" rel="noopener">https://historylink.org/File/2637</a></li>
+        <li><a href="https://www.aetv.com/articles/ted-bundy" target="_blank" rel="noopener">https://www.aetv.com/articles/ted-bundy</a></li>
+        <li><a href="https://www.bbc.com/mundo/articles/c4nwkzq1l40o.amp" target="_blank" rel="noopener">https://www.bbc.com/mundo/articles/c4nwkzq1l40o.amp</a></li>
+        <li><a href="https://www.reddit.com/r/TrueCrimeDiscussion/comments/1okk6vw/lisa_janet_levy_was_only_20_when_she_was_murdered/?tl=es-419" target="_blank" rel="noopener">https://www.reddit.com/r/TrueCrimeDiscussion/comments/1okk6vw/lisa_janet_levy_was_only_20_when_she_was_murdered/?tl=es-419</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Ted_Bundy" target="_blank" rel="noopener">https://es.wikipedia.org/wiki/Ted_Bundy</a></li>
+      </ul>
+    </section>
+    <nav class="entry-nav">
+      <button class="btn btn-ghost" data-nav="casos">← Todos los casos</button>
+      <button class="btn btn-primary" data-nav="caso-pike">Siguiente expediente →</button>
+    </nav>
+  </article>
+</section>
+
+<!-- ================= EXPEDIENTE: EXP-002 ================= -->
+<section class="view" id="view-caso-pike" data-view="caso-pike">
+  <article class="entry">
+    <button class="back-link" data-nav="casos">← Volver a los casos</button>
+    <header class="entry-head">
+      <div class="entry-top"><span class="entry-num">EXP-002</span><span class="badge status-analisis">En desarrollo</span><span class="entry-time">10 min de lectura</span></div>
+      <h1>Christa Pike: la mujer que sobrevivió a dos dosis de inyección letal</h1>
+      <p class="entry-sub">Pasó tres décadas en el corredor de la muerte, y finalmente sobrevivió.</p>
+      <div class="entry-cats"><button class="chip" data-cat-filter="historias">Historias reales</button></div>
+    </header>
+    <div class="entry-body">
+      <p>Hoy hablaremos sobre Christa Gail Pike, más conocida solo como Christa Pike, la mujer que sobrevivió a dos dosis de inyección letal.</p>
+      <p>Antes de entrar en materia, un aviso: este caso tiene partes duras. Voy a contar lo que pasó tal cual lo recogen los tribunales y la prensa, sin suavizarlo, pero también sin regodearme. La idea es entender cómo una historia de 1995 terminó convertida, 31 años después, en una de las noticias más raras y polémicas del sistema de pena de muerte de Estados Unidos.</p>
+      <p>Christa Pike nace el 10 de marzo de 1976 en Beckley, una pequeña ciudad ubicada en Virginia Occidental, Estados Unidos. La infancia de Christa no fue nada fácil: su madre, Carissa Hansen, era alcohólica y públicamente declaró haber sido una madre terrible y negligente. De acuerdo con Liliana Segura en The Intercept, Christa fue violada por un vecino a la edad de once años. Además, según registros médicos y legales, Christa sufrió durante años abusos sexuales por parte de la pareja de su abuela y, adicionalmente, múltiples agresiones en manos de las diferentes parejas de su madre.</p>
+      <p>En consecuencia, la salud mental de Christa fue gravemente afectada ya que intentó quitarse la vida por primera vez cuando tenía nueve años y, posteriormente, a los doce. Más adelante, expertos forenses señalaron que creció con trastorno de estrés postraumático (TEPT) severo y trastorno bipolar, los cuales claramente no fueron tratados durante su juventud.</p>
+      <p>Hay un par de detalles que ayudan a poner el cuadro completo. Según documentos judiciales, el hombre que la agredió de niña, un vecino del mismo parque de casas rodantes, fue juzgado y condenado a dos años de prisión. Cuando Christa le contó a su mamá lo que había pasado, ella no le creyó. A los 12, tras la muerte de su abuela, que era una de las pocas personas que la cuidaba, volvió a intentar suicidarse y casi no recibió ayuda profesional. Y a los 17 denunció otra violación, esta vez a manos de un desconocido que la arrastró a un bosque; logró escapar golpeándolo con una piedra y le hicieron un kit forense en un hospital, pero nunca atraparon al agresor.</p>
+      <p>Después de pasar un año en un centro juvenil, Christa ingreso a Job Corps, un programa del gobierno que da formación laboral a jóvenes de bajos recursos. Terminó su GED (General Educational Development, un examen de equivalencia) y quería ser asistente de enfermería. A finales de 1994 llegó al centro de Knoxville, Tennessee.</p>
+      <p>La idea era empezar de cero, pero el lugar y la gente era muy problemática. Según la defensa, muchos estudiantes cargaban navajas o cúteres para protegerse entre ellos y había mucha violencia. Ahí conoció a Tadaryl Shipp, un chico de 17 años con fama de peligroso, obsesionado con el ocultismo, que según los registros la golpeaba, la pateaba y le prohibía hablar con otros chicos. Aun así, Christa se enamoró de él con una intensidad que vista desde afuera, daba bastante tristeza.</p>
+      <p>En ese mismo ambiente estaba Colleen Slemmer, de 19 años, estudiante de programación. Christa se convenció de que Colleen quería quitarle a su novio. Los amigos de Colleen siempre negaron que hubiera algo entre ella y Tadaryl.</p>
+      <h3>12 de enero de 1995: la noche del crimen</h3>
+      <p>Esto ya es serio. Christa, Tadaryl y una amiga, Shadolla Peterson, firmaron su salida de los dormitorios junto con Colleen. Le dijeron a Colleen que querían hacer las paces y fumar marihuana todos juntos, pero en vez de eso la llevaron a una zona aislada, cerca de una planta de vapor abandonada en el campus agrícola de la Universidad de Tennessee.</p>
+      <p>Según los testimonios del juicio, Christa y Tadaryl atacaron a Colleen durante al menos 30 minutos mientras Shadolla vigilaba. Le pegaron, la cortaron con un cúter y se burlaron de ella. Tadaryl le grabó un pentagrama en el pecho (esto lo admitió él mismo años después, aunque la prensa de la época se lo atribuyó a Christa y lo convirtió en un espectáculo satánico). Por si eso no fuera poco, Christa le destrozó el cráneo con un pedazo grande de asfalto.</p>
+      <p>Y hay un detalle que es de los más perturbadores del caso, Christa se quedó con un fragmento del cráneo de Colleen y se lo enseñó a otros estudiantes como si fuera un trofeo. A la mañana siguiente un trabajador de la universidad encontró el cuerpo de Colleen.</p>
+      <p>El registro de salidas mostraba que cuatro personas se fueron juntas y solo tres volvieron. En menos de 36 horas los tres estaban detenidos, y el pedazo de cráneo apareció en el bolsillo de la chaqueta de Christa. Ella confesó a la policía; según su versión, la idea era solo asustar a Colleen y se les fue de las manos. El Job Corps de Knoxville terminó cerrando de forma permanente tras el escándalo.</p>
+      <h3>El juicio y tres destinos muy distintos</h3>
+      <p>El 22 de marzo de 1996, tras pocas horas de deliberación, un jurado declaró a Christa culpable de asesinato en primer grado y conspiración para cometer asesinato. Ocho días después la condenaron a muerte (en ese momento, por electrocución) y a 25 años más por la conspiración. Christa en ese momento tenía 20 años y era la persona más joven en el corredor de la muerte del estado.</p>
+      <p>Tadaryl Shipp tenía 17 años y por eso no podía recibir pena de muerte. Lo condenaron a cadena perpetua con posibilidad de libertad condicional. Se la negaron en octubre de 2025.</p>
+      <p>Shadolla Peterson, la que hizo de vigía, se declaró culpable de encubrimiento, declaró contra Christa y recibió seis años de libertad condicional.</p>
+      <p>Los abogados de Christa han insistido todos estos años en que su defensa de entonces fue deficiente ya que casi no se presentó ante el jurado el historial de abusos y los problemas de salud mental que Christa arrastraba.</p>
+      <p>Los años siguientes fueron de todo menos tranquilos. En agosto de 2001, Christa y otra reclusa, Natasha Cornett, fueron acusadas de atacar a una compañera, Patricia Jones, e intentar estrangularla con una trenza de zapato. Christa fue condenada por intento de asesinato, y eso le sumó otros 25 años. En 2001 y 2002 pidió, contra el consejo de sus abogados, que se retiraran sus apelaciones y la ejecutaran. Incluso se fijó una fecha para agosto de 2002, pero cambió de opinión y un tribunal permitió que el proceso siguiera. En 2012 salió a la luz un plan de fuga en el que participaban un guardia y un hombre de Nueva Jersey con quien ella se escribía; Christa no fue acusada.</p>
+      <p>Las apelaciones estatales se agotaron en 2008. En 2016 un juez federal rechazó su petición y en 2019 el Sexto Circuito confirmó esa decisión. Según los medios locales, pasó casi tres décadas en lo que sus abogados describen como aislamiento casi total, hasta que un acuerdo legal en 2024 le permitió convivir con un pequeño grupo de mujeres, trabajar y compartir algunas comidas.</p>
+      <p>El 30 de septiembre de 2025, la Corte Suprema de Tennessee fijó su ejecución para exactamente un año después. Si se llevaba a cabo, sería la primera mujer ejecutada en Tennessee en más de dos siglos.</p>
+      <p>Durante ese año su equipo legal no se quedó quieto. Demandaron por el protocolo de ejecución (argumentando, entre otras cosas, que una condición sanguínea que ella tiene podría provocarle un sufrimiento extremo), presentaron un reclamo por libertad religiosa y pidieron clemencia. Un grupo de expertos de la ONU pidió públicamente frenar la ejecución, y organizaciones como Amnistía Internacional hicieron lo propio, señalando su edad al momento del crimen, el abuso que sufrió y la defensa deficiente.</p>
+      <p>Del otro lado estaba la familia de Colleen, que lleva más de tres décadas esperando justicia. Su mamá ha pedido durante años que el fragmento de cráneo se le devuelva para poder enterrarlo, y las autoridades dijeron que no se lo entregarían mientras el caso siguiera abierto. El 28 de septiembre de 2026, el gobernador Bill Lee negó la clemencia.</p>
+      <p>Finalmente la ejecución estaba programada para el 30 de septiembre a las 10 de la mañana hora de Estados Unidos, en la Institución de Máxima Seguridad Riverbend, en Nashville, pero los recursos de último minuto la retrasaron todo el día. Esa tarde, la Corte Suprema de Estados Unidos despejó el camino y el procedimiento arrancó ya de noche.</p>
+      <p>Lo que pasó después es lo que tiene a todo el mundo hablando. Según el protocolo del estado, se administra pentobarbital y, si es necesario, una segunda dosis. Christa recibió las dos, además de solución salina, y no murió. Los testigos describieron respiración muy trabajosa, ronquidos fuertes y, por momentos, sonidos como de atragantamiento. Según una moción de sus abogados, se necesitaron por lo menos siete agujas para conseguir un acceso intravenoso (una salió doblada en ángulo recto) y en un punto ella dijo que sentía el brazo a punto de reventar. Sus abogados sostienen que, por problemas con las vías, el fármaco pudo haber ido al tejido en vez de al torrente sanguíneo. El Departamento de Corrección de Tennessee afirma que siguió el protocolo.</p>
+      <p>Más de una hora después de empezar, los testigos fueron sacados de la sala con Christa todavía respirando. Llegaron ambulancias y la trasladaron a un hospital. Tennessee tuvo que intentar salvarle la vida a alguien a quien minutos antes intentaba ejecutar. Los expertos consultados por la prensa lo consideran un fallo sin precedentes.</p>
+      <p>Tal como lo reportan los medios al cierre de esta entrada, Christa sigue viva, pero la palabra “sobrevivió” aun no es certera, según sus abogados está inconsciente, con ventilador y en estado crítico, con lesiones importantes en ambos brazos. Su pronóstico es incierto. NOTA: Para hoy 6 de octubre del 2026, Christa ha recuperado la consciencia e incluso está hablando, eso aseguran sus abogados, a pesar de sus estado de salud Christa se encuentra encadenada a la cama del hospital y aun no se sabe con certeza su pronóstico.</p>
+      <p>El gobernador Lee suspendió la otra ejecución que quedaba en 2026 y ordenó una revisión independiente de lo ocurrido.</p>
+      <p>El comisionado de Corrección, Frank Strada, anunció su renuncia mientras se investiga.</p>
+      <p>Los abogados de Christa pidieron preservar toda la evidencia del intento y que se conmute su pena a cadena perpetua.</p>
+      <p>Su condena a muerte, formalmente, sigue vigente. No hay un manual para lo que viene, y es posible que esto se decida en los tribunales.</p>
+      <h3>Para pensar</h3>
+      <p>Este es de esos casos donde es difícil quedarse con una sola idea. Por un lado, un crimen brutal contra una chica de 19 años, que tenía una vida por delante y una familia que sigue pidiendo justicia. Por otro, una acusada que tenía 18 años, que fue víctima de abuso desde niña, cuya salud mental nunca fue atendida, que tuvo una defensa que quizá no la protegió como debía, y que terminó con una pena mucho más dura que la de su pareja, quien participó igual (y a quien le tocó la ventaja tener 17).</p>
+      <p>Ninguna de esas cosas borra a las otras. Y ahora se suma una pregunta nueva: qué hace un estado cuando su propio método de ejecución falla. Si te interesa el caso, déjame en los comentarios qué piensas; prometo leerlos todos.</p>
+      <p>Por cierto Actualizado al 6 de octubre de 2026. El caso sigue en desarrollo.</p>
+    </div>
+    <section class="entry-refs">
+      <h4>Fuentes consultadas</h4>
+      <ul>
+        <li>NPR, “Tennessee governor halts executions after Christa Gail Pike survives lethal injection” (1 de octubre de 2026).</li>
+        <li>ABC News, “Christa Pike unconscious and on ventilator in hospital after botched execution, attorneys say” (octubre de 2026).</li>
+        <li>PBS NewsHour / AP, “Christa Pike on a ventilator and unconscious after failed Tennessee execution, attorneys say” (octubre de 2026).</li>
+        <li>CNN, “Christa Pike is on a ventilator and unconscious after surviving lethal injection. What happened?” (2 de octubre de 2026).</li>
+        <li>NBC News, “Christa Pike: What to know about her murder case” y “Tennessee court sets execution date for the state’s only woman on death row” (2025–2026).</li>
+        <li>WBIR (Knoxville), “A timeline of the Christa Pike case” (septiembre de 2026).</li>
+        <li>WSMV / Gray News, cobertura de la ejecución fallida (septiembre–octubre de 2026).</li>
+        <li>The Tennessean (vía USA Today Network / Yahoo News), perfiles y cobertura de la demanda sobre el protocolo de ejecución.</li>
+        <li>Cornell Center on the Death Penalty Worldwide, “Christa Pike, Child Rape Victim, Faces Execution for Crime She Committed as a Teenager”.</li>
+        <li>Death Penalty Information Center (DPIC), página del caso de Christa Pike.</li>
+        <li>Amnistía Internacional USA, acción urgente “Woman facing execution for crime at age 18”.</li>
+        <li>Oficina del Alto Comisionado de la ONU para los Derechos Humanos (OHCHR), comunicado del 7 de septiembre de 2026.</li>
+        <li>Liliana Segura, The Intercept (citado en el texto original de esta entrada).</li>
+        <li>Resúmenes de documentos judiciales (Pike v. State, 2011; Pike v. Gross, 6.º Circuito, 2019), consultados a través de la ficha del caso en Wikipedia.</li>
+      </ul>
+    </section>
+    <nav class="entry-nav">
+      <button class="btn btn-ghost" data-nav="casos">← Todos los casos</button>
+      <button class="btn btn-primary" data-nav="caso-sagawa">Siguiente expediente →</button>
+    </nav>
+  </article>
+</section>
+
+<!-- ================= EXPEDIENTE: EXP-003 ================= -->
+<section class="view" id="view-caso-sagawa" data-view="caso-sagawa">
+  <article class="entry">
+    <button class="back-link" data-nav="casos">← Volver a los casos</button>
+    <header class="entry-head">
+      <div class="entry-top"><span class="entry-num">EXP-003</span><span class="badge status-closed">Cerrado</span><span class="entry-time">6 min de lectura</span></div>
+      <h1>El caso de Issei Sagawa</h1>
+      <p class="entry-sub">La grieta judicial y el respeto a la memoria</p>
+      <div class="entry-cats"><button class="chip" data-cat-filter="perfiles">Perfiles criminales</button></div>
+    </header>
+    <dl class="entry-ficha">
+      <div><dt>Caso Criminal</dt><dd>El asesinato y acto de canibalismo contra Renée Hartevelt cometido por Issei Sagawa.</dd></div>
+      <div><dt>Victima</dt><dd>Renée Hartevelt, estudiante holandesa de literatura comparada en la Universidad de la Sorbona, París. 25 años. Descrita por sus allegados como una joven brillante, políglota, amable y apasionada por las artes.</dd></div>
+      <div><dt>Victimario</dt><dd>Issei Sagawa, estudiante japonés de literatura de vanguardia en la Sorbona. 32 años al momento del crimen. Nacido en una familia de la élite empresarial japonesa (hijo de Akira Sagawa, presidente de Kurita Water Industries).</dd></div>
+      <div><dt>Lugar y Fecha</dt><dd>11 de junio de 1981. Apartamento de Sagawa en el distrito 16 de París, Francia.</dd></div>
+    </dl>
+    <div class="entry-body">
+      <p>El presente artículo aborda un crimen real de extrema gravedad, violencia y fallas sistémicas en la justicia internacional. Se examina desde una perspectiva estrictamente periodística, narrativa y analítica, priorizando el respeto a la memoria de la víctima. Detrás de las luces del París de los años ochenta se consumó un acto de crueldad desgarrador que expuso las contradicciones más profundas de la diplomacia y lo que esta mal y sus consecuencias.</p>
+      <p>Antes de que las portadas del mundo deformaran la tragedia convirtiéndola en un espectáculo espeluznante, existió una mujer llena de proyectos, luz e intelecto Renée Hartevelt, nacida en Holanda, Renée tenía 25 años cuando cursaba sus estudios de posgrado en literatura comparada en la prestigiosa Universidad de la Sorbona. Quienes la conocieron en las aulas parisinas la recordaban como una joven con una sensibilidad artística fuera de lo común, capaz de expresarse con fluidez en varios idiomas y movida por una curiosidad intelectual inagotable. Su infancia y juventud en los Países Bajos estuvieron marcadas por el afecto familiar, la dedicación académica y un futuro prometedor en el ámbito de la docencia y las letras, a tal punto que logro llegar por su gran excelencia academica a las calles de paris.</p>
+      <p>Corría el año 1981 Francia vivía un momento de ebullición política y cultural tras la reciente llegada al poder de François Mitterrand. París reconfirmaba su estatus como el epicentro intelectual de Europa, atrayendo a miles de estudiantes internacionales a sus aulas universitarias, Sin embargo, en medio de este ambiente cosmopolita y de aparente sofisticación, estaba por ocurrir un suseso que marcaria un antes y un despues.</p>
+      <p>Issei Sagawa, de 32 años, hijo de Akira Sagawa, un magnate de la industria japonesa con inmensas conexiones políticas y financieras, Sagawa creció rodeado de privilegios absolutos pero marcado por una salud física frágil durante su infancia. Desde su juventud en Tokio demostró obsesiones perturbadoras hacia mujeres occidentales, acompañadas de impulsos caníbales declarados. Años antes de viajar a Francia, en Tokio, Sagawa ya había intentado agredir a una mujer alemana, pero la influencia y el poder económico de su padre lograron sofocar el incidente sin que se generara un antecedente penal formal.</p>
+      <p>En París, bajo la fachada de un estudiante de baja estatura, frágil y tímido, Sagawa entabló amistad con Renée Hartevelt en la Sorbona. Utilizó su aparente inofensiva presencia y su interés compartido por la poesía alemana para ganarse la confianza de la joven holandesa, compartiendo lecturas, tazas de té y conversaciones académicas.</p>
+      <p>El 11 de junio de 1981, Sagawa invitó a Renée a su apartamento bajo el argumento de grabar una lectura de poesía para un trabajo académico. Mientras Renée leía de espaldas a él sentada en un escritorio, Sagawa sacó un rifle calibre .22 que había adquirido legalmente y le disparó a quemarropa en la nuca, causándole la muerte instantánea. Durante los dos días siguientes, perpetró actos indescriptibles de necrofilia y mutilación, consumiendo partes del cuerpo de la joven. Las hipótesis psiquiátricas posteriores determinaron que Sagawa padecía un cuadro complejo de canibalismo fetichista asociado a una grave psicosis narcisista, donde creía erróneamente que al consumir a una mujer sana, hermosa y alta 'absorbería' su vitalidad y belleza.</p>
+      <p>El 13 de junio, al intentar deshacerse de los restos empaquetados en dos maletas pesadas en un estanque del parque Bois de Boulogne a plena luz del día, la torpeza de sus movimientos atrajo la atención de paseantes. Al ser confrontado visualmente, huyó en un taxi, pero los testigos alertaron a la policía con la descripción exacta. Fue arrestado pocas horas después en su piso, donde las autoridades hallaron evidencia irrefutable del crimen.</p>
+      <p>El proceso judicial tomó un rumbo controvertido cuando el juez de instrucción francés, JeanLouis Bruguière, amparándose en el artículo 64 del Código Penal francés de la época, declaró a Sagawa "incomputable" por enajenación mental grave, suspendiendo el juicio penal ordinario e internándolo en el hospital psiquiátrico de alta seguridad Henri Colin. Aquí comenzó la falla sistémica. El padre de Sagawa movilizó un equipo legal de élite que presionó para lograr la repatriación de su hijo. En 1984, las autoridades francesas, deseando desligarse de los altos costes y la complicación del caso, acordaron deportarlo a Japón.</p>
+      <p>Sin embargo, al ingresar a Japón, las autoridades médicas de la clínica Matsuzawa determinaron tras rigurosos exámenes que Sagawa no sufría de una psicosis descompensada, sino de una grave perversión sexual voluntaria por lo tanto, era penalmente responsable. Se produjo entonces un abismo legal fatídico, Francia consideraba el caso cerrado por enajenación y se negó a enviar los expedientes judiciales originales resguardados por el principio de confidencialidad médica a la justicia japonesa. Sin querellas activas en Francia ni acceso formal a las pruebas físicas requisadas en París, la justicia de Japón se vio atada de manos y obligada a decretar su liberación formal el 12 de agosto de 1986.</p>
+      <p>Libre de toda condena legal, Sagawa capitalizó su infamia de manera grotesca. Lejos de buscar la sombra o el anonimato, se convirtió en una celebridad menor en Japón. Escribió más de 20 libros relatando detalladamente su crimen, dibujó mangas explícitos, participó en películas de serie B, apareció en comerciales de televisión e incluso ejerció como crítico gastronómico para revistas de circulación nacional, lucrándose impunemente del dolor de la familia Hartevelt. A lo largo de las décadas, la familia de Renée Hartevelt expresó repetidamente su devastación ante la absoluta falta de justicia y la humillación continua que significaba ver al asesino de su hija comercializar su tragedia.</p>
+      <p>En sus últimos años, la salud de Sagawa se deterioró gravemente a causa de un derrame cerebral que lo dejó parapléjico y bajo la tutela de su hermano menor. El 24 de noviembre de 2022, Issei Sagawa falleció en un hospital de Tokio a los 73 años debido a una neumonía, cerrando definitivamente uno de los capítulos más oscuros y frustrantes de la historia penal contemporánea.</p>
+      <p>El caso de Issei Sagawa no es una leyenda urbana ni una historia de ficción sobre monstruos; es un recordatorio trágico de cómo las lagunas burocráticas, las diferencias entre sistemas jurídicos internacionales y el peso del privilegio económico. Mientras el responsable vivió décadas bajo los reflectores de la fama por sus malvados actos, la memoria que debemos preservar es la de Renée Hartevelt una promesa literaria cuya vida fue arrebatada de forma imperdonable.</p>
+      <p>¿Hasta qué punto la fascinación de los medios de comunicación por la figura de los criminales reales convierte al público en cómplice? ¿Y hasta que punto vamos a olvidar lo que realmente importa, quienes realmente sufrieron y perdieron algo, como todo el futuro por delante de Renée Hartevelt?</p>
+    </div>
+    <section class="entry-refs">
+      <h4>Referencias</h4>
+      <ul>
+        <li>Bruguière, J.-L. (2009). Ce que je n'ai pas pu dire. Éditions Robert Laffont. (Memorias del juez de instrucción del caso en París).</li>
+        <li>Castaing-Taylor, L., &amp; Paravel, V. (Directores). (2017). Caniba [Documental]. SELMA Film / Sensory Ethnography Lab.</li>
+        <li>The New York Times Archive. (1981-1986). Coverage on the Issei Sagawa Extradition and Legal Status.</li>
+        <li>The Japan Times. (2022). Issei Sagawa, killer who ate French student, dies at 73. Edición del 2 de diciembre de 2022.</li>
+      </ul>
+    </section>
+    <nav class="entry-nav">
+      <button class="btn btn-ghost" data-nav="casos">← Todos los casos</button>
+      <button class="btn btn-primary" data-nav="caso-dalia">Siguiente expediente →</button>
+    </nav>
+  </article>
+</section>
+
+<!-- ================= EXPEDIENTE: EXP-004 ================= -->
+<section class="view" id="view-caso-dalia" data-view="caso-dalia">
+  <article class="entry">
+    <button class="back-link" data-nav="casos">← Volver a los casos</button>
+    <header class="entry-head">
+      <div class="entry-top"><span class="entry-num">EXP-004</span><span class="badge status-open">Sin resolver</span><span class="entry-time">10 min de lectura</span></div>
+      <h1>Elizabeth Short, La Dalia Negra</h1>
+      <div class="entry-cats"><button class="chip" data-cat-filter="sinresolver">Sin resolver</button></div>
+    </header>
+    <div class="entry-body">
+      <p>En la criminología hay varios casos que se estudian para comprender los motivos de los perpetradores para cometer un crimen, muchos de ellos suelen tener un inicio, una explicación y logran ser finalizados, en otros casos el impacto de los hechos suele ser tan grande que sorprende a todos a nivel nacional, incluso a nivel internacional, pero muy pocos logran impactar tanto que incluso influyen en la cultura popular y perduran por muchos años en el recuerdo colectivo.</p>
+      <p>Elizabeth Short era una mujer estadounidense que decidió asentarse en Los Ángeles, California para seguir su sueño de convertirse en una actriz famosa durante una época post guerra, lamentablemente sus objetivos se verían interrumpidos por una gran tragedia que provocaría su fama de una manera inesperada y no deseada.</p>
+      <h3>Vida antes de los sucesos</h3>
+      <p>Elizabeth Short nació el 29 de julio de 1924 en la ciudad de Boston, Massachusetts, siendo la hija de enmedio con un total de 4 hermanas, sus padres fueron Cleo y Phoebe Short. Su padre se dedicaba a las ventas, encontrando una buena oportunidad de negocios en el golf miniatura que comenzó a ganar popularidad durante los años 20, para su mala suerte el negocio dejó de ser rentable para inicios de la década de los 30 generándole una gran pérdida económica. Debido a la presión de su negocio fallido y el delicado estado de su matrimonio, decidió fingir su muerte conduciendo y aparcando su auto cerca de un puente que pasaba por un río, simulando que se arrojó al río.</p>
+      <p>Este suceso afectó bastante a la familia Short durante años, por alguna razón Cleo volvió a aparecerse en las vidas de la familia Short, pidiéndole disculpas a Phoebe por sus acciones, a lo cual ella se negó rotundamente, la única de la familia que estuvo dispuesto a perdonarlo fue Elizabeth, con el tiempo planearon una reunión donde Elizabeth incluso decidió mudarse con su padre en California. Durante su estancia la chica terminó decepcionada gracias a la actitud fría, distante y gran gusto por el alcohol de su padre, dejando de vivir junto a él pero quedándose en California para perseguir su sueño realizando distintos trabajos para lograr su objetivo.</p>
+      <p>A sus 15 años Elizabeth fue operada de los pulmones debido a distintos problemas respiratorios con el asma y la bronquitis, aunque su salud mejoró siguió tomando medidas preventivas como viajar de Massachusetts a Florida durante el invierno, donde trabajaba temporalmente como camarera. El 23 de septiembre de 1943 es arrestada debido al consumo de bebidas alcohólicas siendo aún menor de edad en el restaurante El Paseo en Santa Bárbara, California, no es retenida por mucho tiempo y la policía la deja libre, apoyándola incluso con dinero para comprar un boleto de bus de regreso a Massachusetts.</p>
+      <p>En 1944 Elizabeth Short conoce a Matt Gordon, un piloto de combate que se encontraba con permiso de descanso debido a que se estaba recuperando de unas heridas que sufrió en febrero del mismo año. Ambos desarrollaron una relación romántica que lamentablemente no duraría mucho debido a que el piloto fallecería en combate; su avión se estrellaría en Bengala Occiddental, India, el 10 de agosto de 1945, un día después del bombardeo nuclear en Nagasaki, Japón, a pocas semanas de que la guerra terminara, afectando terriblemente a Elizabeth, una perdida de la que nunca se recuperó.</p>
+      <p>Mientras se encontraba viviendo en California se quedaba a vivir por un tiempo con amigas, rentando departamento con otras chicas o recibiendo apoyo de soldados mientras realizaba distintos trabajos en tiendas o restaurantes, durante el verano de 1946 vivió por un tiempo con unos amigos ubicados en Long Beach, California, donde supuestamente le pusieron un apodo que más tarde la volvería inolvidable, “Dalia negra”, la razón de este apodo se debía al característico cabello oscuro que tenía Elizabeth junto a su gusto por vestir ropa oscura. A finales de ese mismo año se muda a San Diego por un tiempo con unas chicas llamadas Dorothy y Elvera French, durante su estancia conoció a Robert “Red” Manley, un vendedor que se ofreció a darle un aventón para regresar a Los Ángeles.</p>
+      <p>Después de dos meses quedándose con las French, Elizabeth aceptó la ayuda de Robert, saliendo de viaje el 8 de enero de 1947, decidió quedarse con la chica en un motel el 9 de enero antes de llegar a su destino. Al llegar a su destino Robert no estaba dispuesto a dejar a Elizabeth sola por lo concurrido que era el lugar, ambos fueron al Hotel Biltmore donde la chica le contó al hombre que estaría esperando a su hermana Virginia para una reunión, aunque esto era una mentira para lograr zafarse del cuidado de Robert, ambos se quedaron esperando en el lobby por mucho tiempo hasta que Robert decidió irse por su cuenta dejando a Elizabeth sola finalmente, después de un tiempo ella también decidió dejar el lobby del hotel donde sería la última vez que sería vista.</p>
+      <h3>Suceso del crimen</h3>
+      <p>La mañana del 15 de enero en Los Ángeles una mujer llamada Betty Bersinger estaba paseando junto a su hija pequeña por Norton Avenue, mientras caminaba observó en un terreno entre la maleza algo que parecía un maniquí desechado, por lo que decidió investigar, la mujer quedó horrorizada al darse cuenta que en realidad se trataba de un cuerpo humano, llamando inmediatamente a la policía por el terrible hallazgo, que más tarde se identificaría como el cadáver de Elizabeth Short, su identidad pudo ser reconocida rápidamente gracias al arresto que sufrió en su juventud debido al registro de sus huellas dactilares.</p>
+      <p>El asesinato de la chica resultó muy impactante debido a la forma en que se encontró su cuerpo; se encontraba desnuda y había sido cortada a la mitad por la cadera, junto con horribles cortes en la cara que iban desde ambas comisuras de la boca hasta sus oidos, las características más curiosas del caso, la cuales permitieron a la policia formular quien podría ser el culpable, fue la ausencia total de sangre en el cádaver y el corte en la cadera de la muchacha, estas dos pistas le permitieron a la policía suponer que el asesino debería ser una persona con conocimiento médico por generar un buen corte y drenar completamente sin problemas toda la sangre del cuerpo.</p>
+      <p>A pesar de los esfuerzos de la policía nunca se logró hallar al verdadero asesino, se llegaron a interrogar a 150 personas diferentes, en su mayoría médicos y estudiantes de medicina, pero ninguno presentó información importante para resolver el caso.</p>
+      <h3>Negligencias del caso</h3>
+      <p>Cuando el cuerpo de Elizabeth Short fue descubierto hubo un frenesí mediático debido al impacto que había causado el hecho, a la escena del crimen llegaron varios periodistas antes que la policía, lo que causó que la escena del crimen fuera profanada múltiples veces mientras la policía tardaba en llegar, lo que dificulto más adelante la obtención de pistas.</p>
+      <p>El periódico más interesado en obtener primero la primicia de la noticia fue “Los Angeles Examiner” llegando a realizar acciones poco éticas para lograr captar la atención de sus lectores y destacar de entre los demás periódicos en la cobertura del impactante caso de homicidio.</p>
+      <p>Dicho medio periodístico comenzó a redactar notas sensacionalistas sobre la muerte de la chica, especialmente difundiendo el rumor de que se dedicaba a la prostitución cuando estaba viva, información que nunca fue confirmada por la polícia, al mismo tiempo al verse necesitados de obtener más información sobre la víctima llegaron a contactar con la madre de Elizabeth, quien fue engañada durante una llamada telefónica contándole que su hija había ganado un concurso de belleza para sacarle información sobre su hija, poco después le contaron que su hija había sido asesinada, el periódico se ofreció pagarle el boleto de avión y su estancia en Los Ángeles bajo la excusa de que así pudiera estar al tanto de las investigaciones sobre el caso de su hija, al llegar al estado el periódico procuro mantener a la madre al margen de los polícias y de otros medios para lograr ser los primeros en extraerle información y mantener su exclusiva en dicha noticia.</p>
+      <p>El supuesto asesino incluso llegó a mandar cartas hacia las oficinas de dicho periódico ofreciendo más información sobre su víctima e incluso burlándose de lo poco eficientes que estaban siendo las investigaciones sobre el caso.</p>
+      <p>El caso fue nombrado como la “Dalia negra” en relación al apodo que recibía de sus amigos, junto con la referencia a la película “La dalia azul” protagonizada por Veronica Lake estrenada unos meses antes de su muerte y su única relación con el espectáculo debido a que nunca llegó a tener una participación relevante dentro del medio.</p>
+      <h3>Supuesto responsable del hecho</h3>
+      <p>Hasta el día de hoy que se redacta esta entrada el responsable del asesinato de Elizabeth Short sigue sin resolverse, hubieron muchas teorías sobre quien podría ser el responsable desde supuestas parejas hasta distintas figuras importantes de la época como el cantante de country Woody Guthrie, el mafioso Bugsy Siegel e incluso vincular el caso con el “asesino del Zodiaco”.</p>
+      <p>La hipótesis más famosa viene de Steve Hodel, un ex detective del Departamento de Policía de Los Ángeles (LAPD) quien ha acusado a su padre George Hodel, ya fallecido, como el responsable del homicidio de “La dalia negra”. George Hodel era un médico famoso que se relacionaba con gente importante y artistas famosos de Los Ángeles, según Steve Hodel encontró registros en los archivos de su padre después de que este falleciera en 1999 donde mencionaba haber conocido a Elizabeth Short, se supone que sus conexiones importantes con la policía de Los Ángeles habrían entorpecido las investigaciones por lo que nunca se procedió un arresto hacía su padre, algo que no sería raro de ser cierto debido a que George anteriormente fue acusado por la muerte de su ex secretaría, quien murió en circunstancias misteriosas, además de ser acusado de violación por una de sus hijas, acusasión que no llegó a procesarse tampoco.</p>
+      <p>A pesar de la información ofrecida por Steve, las investigaciones de distintos detectives no la consideran oficial debido a distintos datos que el propio Steve ofrecía que no terminaban de ser contundentes o no estaban bien fundamentadas.</p>
+      <p>El caso de “La dalia negra” ha influenciado bastante en el tema criminalístico debido al impacto que generó en su época, debido a la violencia que presentaba el suceso y la forma en que los medios cubrieron los hechos, a lo largo de los años su homicidio influenciaría diferentes producciones enfocadas en el género de crimen/noir, a pesar de eso no hay que dejar de lado que la historia tiene una persona real detrás de ella, Elizabeth Short fue una mujer que prefirió seguir sus sueños con una gran perseverancia a pesar de los malos momentos que se presentaron en su vida hasta el trágico día de su muerte, a pesar de que nunca se encontró su asesino, hay que reconocer que los medios influyeron de forma negativa en la forma que se desarrolló la cobertura de su muerte, deshumanizando de cierta forma su fallecimiento enfocándose más en el morbo y misterio que rodeaba su asesinato y su estilo de vida.</p>
+    </div>
+    <section class="entry-refs">
+      <h4>Referencias</h4>
+      <ul>
+        <li>Bravo, E. (2024, 30 de julio). La Dalia Negra cumple 100 años. Revista GQ. <a href="https://www.revistagq.com/articulo/la-dalia-negra-historia" target="_blank" rel="noopener">https://www.revistagq.com/articulo/la-dalia-negra-historia</a></li>
+        <li>Bartlett, J. (2017, 8 de enero). El caso de la Dalia Negra, el asesinato más famoso de Los Ángeles que décadas después sigue atrayendo la fascinación del público. BBC News. <a href="https://www.bbc.com/mundo/noticias-38545892" target="_blank" rel="noopener">https://www.bbc.com/mundo/noticias-38545892</a></li>
+        <li>Elizabeth Short Biografía. (s. f.). IMDb. <a href="https://www.imdb.com/es/name/nm1274122/bio/#mini_bio" target="_blank" rel="noopener">https://www.imdb.com/es/name/nm1274122/bio/#mini_bio</a></li>
+        <li>Elizabeth Short-Centenary. (2024, 29 de julio). Deranged LA Crimes. <a href="https://derangedlacrimes.com/?tag=virginia-short" target="_blank" rel="noopener">https://derangedlacrimes.com/?tag=virginia-short</a></li>
+        <li>Salas, M. (2025. 24 de diciembre). Detective dice que el asesino del Zodíaco y de la Dalia Negra podría haber sido el mismo hombre: usó inteligencia artificial para descifrar el caso. El Tiempo. <a href="https://www.eltiempo.com/cultura/gente/detective-dice-que-el-asesino-del-zodiaco-y-de-la-dalia-negra-podria-haber-sido-el-mismo-hombre-uso-inteligencia-artificial-para-descifrar-el-caso-3519474" target="_blank" rel="noopener">https://www.eltiempo.com/cultura/gente/detective-dice-que-el-asesino-del-zodiaco-y-de-la-dalia-negra-podria-haber-sido-el-mismo-hombre-uso-inteligencia-artificial-para-descifrar-el-caso-3519474</a></li>
+      </ul>
+    </section>
+    <nav class="entry-nav">
+      <button class="btn btn-ghost" data-nav="casos">← Todos los casos</button>
+      <button class="btn btn-primary" data-nav="caso-bundy">Siguiente expediente →</button>
+    </nav>
+  </article>
 </section>
 
 <section class="newsletter" id="suscribete">
