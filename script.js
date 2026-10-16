@@ -106,3 +106,52 @@ document.querySelectorAll('[data-cat-filter]').forEach(el => {
 const startView = (location.hash || '#inicio').replace('#', '');
 goTo(document.querySelector('.view[data-view="' + startView + '"]') ? startView : 'inicio');
 applyFilters();
+
+// ---- Suscripcion por correo ----
+const formSuscripcion = document.getElementById('formSuscripcion');
+const correoSuscripcion = document.getElementById('correoSuscripcion');
+const mensajeSuscripcion = document.getElementById('mensajeSuscripcion');
+
+formSuscripcion.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const boton = formSuscripcion.querySelector('button');
+  const correo = correoSuscripcion.value.trim();
+
+  mensajeSuscripcion.className = 'nform-msg';
+  if(!correoSuscripcion.checkValidity() || correo === ''){
+    mensajeSuscripcion.textContent = 'Ingresa un correo válido.';
+    mensajeSuscripcion.classList.add('error');
+    return;
+  }
+
+  boton.disabled = true;
+  boton.textContent = 'Enviando...';
+
+  try {
+    const respuesta = await fetch('/api/suscriptores', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ correo })
+    });
+    const datos = await respuesta.json();
+
+    if(respuesta.ok){
+      mensajeSuscripcion.textContent = datos.mensaje === 'Ya estabas suscrito'
+        ? 'Ese correo ya estaba suscrito.'
+        : '¡Listo! Te avisaremos de cada expediente nuevo.';
+      mensajeSuscripcion.classList.add('ok');
+      boton.textContent = 'Suscrito ✓';
+      formSuscripcion.reset();
+    } else {
+      mensajeSuscripcion.textContent = datos.mensaje || 'No se pudo suscribir.';
+      mensajeSuscripcion.classList.add('error');
+      boton.textContent = 'Suscribirme';
+    }
+  } catch(err) {
+    mensajeSuscripcion.textContent = 'No hay conexión con el servidor. Abre el blog desde http://localhost:3000';
+    mensajeSuscripcion.classList.add('error');
+    boton.textContent = 'Suscribirme';
+  } finally {
+    boton.disabled = false;
+  }
+});

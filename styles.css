@@ -212,6 +212,11 @@ nav.wrap{display:flex; align-items:center; justify-content:space-between; height
 .nform input{font-family:var(--font-mono); font-size:13px; padding:14px 16px; border:2px solid var(--ink); background:var(--paper); color:var(--ink); flex:1; min-width:200px;}
 .nform button{font-family:var(--font-mono); font-size:12px; letter-spacing:1px; text-transform:uppercase; font-weight:700; padding:0 22px; background:var(--ink); color:var(--paper); border:2px solid var(--ink); cursor:pointer;}
 .nform button:hover{background:transparent; color:var(--ink);}
+.nform button:disabled{opacity:.6; cursor:wait;}
+.nform-msg{flex-basis:100%; margin-top:10px; font-family:var(--font-mono); font-size:12.5px; color:var(--ink); min-height:1em;}
+.nform-msg.ok{font-weight:700;}
+.nform-msg.error{background:var(--ink); color:var(--paper); padding:6px 10px; display:inline-block;}
+.nform-msg:empty{display:none;}
 
 /* ---------- FOOTER ---------- */
 footer{background:var(--panel); padding:56px 0 26px;}
