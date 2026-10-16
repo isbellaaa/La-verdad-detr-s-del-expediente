@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publicar expediente — Casos Criminales</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .admin{max-width:640px; margin:0 auto; padding:56px 28px 80px;}
+  .admin h1{font-family:var(--font-display); font-size:clamp(36px,6vw,54px); text-transform:uppercase; line-height:1;}
+  .admin .sub{color:var(--paper-dim); margin-top:8px; font-size:14.5px;}
+  .admin form{margin-top:32px; display:flex; flex-direction:column; gap:18px;}
+  .admin label{font-family:var(--font-mono); font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--paper-dim); display:flex; flex-direction:column; gap:8px;}
+  .admin input, .admin textarea{font-family:var(--font-body); font-size:15px; padding:12px 14px; background:var(--panel-raised); color:var(--paper); border:1px solid var(--line);}
+  .admin textarea{min-height:130px; resize:vertical;}
+  .admin input:focus, .admin textarea:focus{border-color:var(--blood); outline:none;}
+  .admin .acciones{display:flex; gap:12px; flex-wrap:wrap; align-items:center;}
+  .admin button{font-family:var(--font-mono); font-size:12px; letter-spacing:1px; text-transform:uppercase; font-weight:700; padding:14px 22px; border:2px solid var(--blood); background:var(--blood); color:var(--paper); cursor:pointer;}
+  .admin button.secundario{background:transparent; border-color:var(--line); color:var(--paper-dim);}
+  .admin button:disabled{opacity:.6; cursor:wait;}
+  .admin .resultado{font-family:var(--font-mono); font-size:13px; padding:14px 16px; border-left:4px solid var(--blood); background:var(--panel); white-space:pre-line;}
+  .admin .resultado:empty{display:none;}
+  .admin .volver{display:inline-block; margin-top:28px; font-family:var(--font-mono); font-size:12px; color:var(--paper-dim);}
+</style>
+</head>
+<body>
+<div class="tape"></div>
+<main class="admin">
+  <h1>Publicar expediente</h1>
+  <p class="sub">Al publicar, se guarda la entrada y se envía un correo a todos los suscriptores.</p>
+
+  <form id="formEntrada">
+    <label>Clave de administrador
+      <input type="password" id="clave" required autocomplete="current-password">
+    </label>
+    <label>Título
+      <input type="text" id="titulo" required maxlength="200">
+    </label>
+    <label>Resumen (es lo que va en el correo)
+      <textarea id="resumen" required></textarea>
+    </label>
+    <label>Enlace al expediente (opcional)
+      <input type="url" id="enlace" placeholder="http://localhost:3000/#caso-bundy">
+    </label>
+    <div class="acciones">
+      <button type="submit">Publicar y notificar</button>
+      <button type="button" class="secundario" id="verSuscriptores">Ver suscriptores</button>
+    </div>
+    <p class="resultado" id="resultado" role="status" aria-live="polite"></p>
+  </form>
+
+  <a href="/" class="volver">← Volver al blog</a>
+</main>
+
+<script>
+  const resultado = document.getElementById('resultado');
+  const clave = document.getElementById('clave');
+
+  document.getElementById('formEntrada').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const boton = e.target.querySelector('button[type="submit"]');
+    boton.disabled = true;
+    resultado.textContent = 'Publicando y enviando correos...';
+
+    try {
+      const respuesta = await fetch('/api/entradas', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-admin-clave': clave.value },
+        body: JSON.stringify({
+          titulo: document.getElementById('titulo').value,
+          resumen: document.getElementById('resumen').value,
+          enlace: document.getElementById('enlace').value
+        })
+      });
+      const datos = await respuesta.json();
+
+      if(!respuesta.ok){
+        resultado.textContent = datos.mensaje;
+        return;
+      }
+
+      let texto = 'Entrada publicada (' + datos.entrada.fecha + ').\nSuscriptores: ' + datos.suscriptores;
+      if(!datos.correoConfigurado){
+        texto += '\nNo se enviaron correos: falta CORREO_USUARIO / CORREO_CLAVE en el .env';
+      } else {
+        texto += '\nCorreos enviados: ' + datos.correosEnviados;
+        if(datos.correosFallidos > 0) texto += '\nCorreos fallidos: ' + datos.correosFallidos + ' (revisa la terminal)';
+      }
+      resultado.textContent = texto;
+      document.getElementById('titulo').value = '';
+      document.getElementById('resumen').value = '';
+      document.getElementById('enlace').value = '';
+    } catch(err) {
+      resultado.textContent = 'No hay conexión con el servidor.';
+    } finally {
+      boton.disabled = false;
+    }
+  });
+
+  document.getElementById('verSuscriptores').addEventListener('click', async () => {
+    try {
+      const respuesta = await fetch('/api/suscriptores', { headers: { 'x-admin-clave': clave.value } });
+      const datos = await respuesta.json();
+      if(!respuesta.ok){
+        resultado.textContent = datos.mensaje;
+        return;
+      }
+      resultado.textContent = 'Total: ' + datos.total + '\n'
+        + datos.suscriptores.map(s => s.fecha + '  ' + s.correo).join('\n');
+    } catch(err) {
+      resultado.textContent = 'No hay conexión con el servidor.';
+    }
+  });
+</script>
+</body>
+</html>
